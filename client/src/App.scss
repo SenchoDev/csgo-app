@@ -1,0 +1,92 @@
+$color-primary: #FD074E;
+
+$color-secondary: #0A0B20;
+$color-secondary-light:#0C0E25;
+
+$color-white: #FFFFFF;
+$color-white-dark: #EBEBEB;
+
+$color-tertiary: #6843CF;
+$color-tertiary-2: #21AC54;
+
+$bp-largest: 75em;  //1200px
+$bp-large: 62.5em;  // 1000px
+$bp-medium: 50em; // 800px;
+$bp-small: 37.5em; // 600px;
+
+
+// FONT VARIABLES
+$font-primary: 'Roboto', sans-serif;
+
+//RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;  //1200px
+$bp-large: 62.5em;  // 1000px
+$bp-medium: 50em; // 800px;
+$bp-small: 37.5em; // 600px;
+
+/*
+-phone
+-tab-port
+-tab-land
+big-desktop
+
+
+order : Base + typography > general layout + grid > page layout > components
+
+*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding:0;
+  box-sizing: inherit;
+}
+
+
+
+@mixin respond($breakpoint){
+  @if $breakpoint == last{
+    @media  only screen and (max-width: 25em){@content}; //600p
+  }
+    
+    
+    @if $breakpoint == big-desktop{
+    @media only screen and(min-width: 140.625em){@content}; //1200px
+  }
+}
+
+body {
+  font-family: $font-primary ;
+  color:$color-white;
+  line-height: 1.6;
+  background-color:$color-secondary ;
+  min-height: calc(100vh - 2 * 4vw);
+}
+
+
+.container {
+  display: grid;
+  grid-template-rows: 7rem minmax(calc(100vh - 7rem), auto);
+  grid-template-columns: 30rem 1fr;
+  grid-template-areas: "navbar header-main"
+                       "navbar main";
+                       
+}
+
+.child{
+  &-1{
+    grid-area: navbar;
+    background-color: red;
+    width:inherit;
+    max-width:inherit;
+  }
+
+  &-2{
+    grid-area: header-main;
+    background-color: green;
+  }
+  &-3{
+    grid-area: main;
+    background-color: blue;
+  }
+}
