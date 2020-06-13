@@ -41,6 +41,10 @@ order : Base + typography > general layout + grid > page layout > components
   padding:0;
   box-sizing: inherit;
 }
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
 
 
 
@@ -66,27 +70,13 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 7rem minmax(calc(100vh - 7rem), auto);
-  grid-template-columns: 30rem 1fr;
+  grid-template-rows: 16rem minmax(calc(100vh - 16rem), auto);
+  grid-template-columns: 42rem 1fr;
   grid-template-areas: "navbar header-main"
                        "navbar main";
                        
 }
-
-.child{
-  &-1{
-    grid-area: navbar;
-    background-color: red;
-    width:inherit;
-    max-width:inherit;
-  }
-
-  &-2{
-    grid-area: header-main;
-    background-color: green;
-  }
-  &-3{
-    grid-area: main;
-    background-color: blue;
-  }
+.main-wrapper{
+  grid-area: main;
+  background-color: $color-secondary-light;
 }
