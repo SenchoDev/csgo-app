@@ -1,6 +1,7 @@
 $color-secondary: #0A0B20;
 
 $color-primary: #FD074E;
+$color-white: #FFFFFF;
 
 .navbar{
   grid-area: navbar;
@@ -13,5 +14,31 @@ $color-primary: #FD074E;
     align-items: center;
     margin-left: -4rem;
     border-bottom: 1px solid $color-primary;
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+    margin-left: 4vw;
+    margin-top: 2vw;
+    list-style: none;
+    & li{ 
+      list-style: none;
+    }
+
+  }
+  &__item{
+    display: flex;
+    width: 25rem;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    background-color: red;
+    list-style: none;
+  }
+
+  &__text{
+    color: $color-white;
+    font-size: 2.4rem;
   }
 }

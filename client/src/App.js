@@ -7,6 +7,7 @@ import Navbar from './components/navbar/navbar.component'
 import Header from './components/header/header.component'
 import HomePage from './pages/homepage/homepage.component'
 import TeamsList from './pages/teamslist/teamslist.component'
+import PlayersSettings from './pages/playerssettings/playerssettings.component'
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component'
 
 const App = () => {
@@ -18,6 +19,8 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={HomePage}/>
           <Route exact path="/players" component={TeamsList}/>
+          <Route exact path="/players_settings" component={PlayersSettings}/>
+
           <Route
               exact
               path="/signin"
