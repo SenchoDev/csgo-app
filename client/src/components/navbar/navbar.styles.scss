@@ -1,13 +1,13 @@
-$color-secondary: #0A0B20;
+$color-secondary: #0a0b20;
 
-$color-primary: #FD074E;
-$color-white: #FFFFFF;
+$color-primary: #fd074e;
+$color-white: #ffffff;
 
-.navbar{
+.navbar {
   grid-area: navbar;
   background-color: $color-secondary;
 
-  &__img-box{
+  &__img-box {
     height: 16rem;
     display: flex;
     justify-content: center;
@@ -16,29 +16,34 @@ $color-white: #FFFFFF;
     border-bottom: 1px solid $color-primary;
   }
 
-  &__list{
+  &__list {
     display: flex;
     flex-direction: column;
-    margin-left: 4vw;
-    margin-top: 2vw;
+   
+    margin-top: 4vw;
     list-style: none;
-    & li{ 
+    & li {
       list-style: none;
     }
-
   }
-  &__item{
+  &__item {
     display: flex;
-    width: 25rem;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    padding: 2rem;
     align-items: center;
     text-decoration: none;
-    background-color: red;
     list-style: none;
+    margin-top: 0.5rem;
+    
+
+    &:hover{
+      background-color: rgba(#D2D2D2, 0.07);   
+    }
   }
 
-  &__text{
+  &__text {
     color: $color-white;
     font-size: 2.4rem;
+    font-weight: 400;
   }
 }

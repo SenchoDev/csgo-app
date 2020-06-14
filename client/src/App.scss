@@ -71,7 +71,7 @@ body {
 .container {
   display: grid;
   grid-template-rows: 16rem minmax(calc(100vh - 16rem), auto);
-  grid-template-columns: 42rem 1fr;
+  grid-template-columns: 45rem 1fr;
   grid-template-areas: "navbar header-main"
                        "navbar main";
                        

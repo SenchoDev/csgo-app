@@ -4,4 +4,29 @@ $color-secondary-light:#0C0E25;
 .header {
   grid-area: header-main;
   background-color: $color-secondary-light;
+  display: flex;
+  flex-direction: right;
+  padding-right: 7vw;
+  justify-content: flex-end;
+  align-items: center;
+  &__text{
+    padding-right: 4rem;
+    text-decoration: none;
+    font-size: 2.1rem;
+    color: #FFFFFF;
+    transition: all .5s;
+    cursor: pointer;
+    &:hover{
+      color: #FD074E;
+    }
+    &-red{
+      color: #FD074E;
+      &:hover{
+        color: #21AC54;
+      }
+    }
+    &-signin{
+      padding-left: 6rem
+    }
+  }
 }

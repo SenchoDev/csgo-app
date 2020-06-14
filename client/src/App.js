@@ -9,6 +9,7 @@ import HomePage from './pages/homepage/homepage.component'
 import TeamsList from './pages/teamslist/teamslist.component'
 import PlayersSettings from './pages/playerssettings/playerssettings.component'
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component'
+import PlayersCrosshairs from './pages/playerscrosshairs/playerscrosshairs.component'
 
 const App = () => {
   return (
@@ -20,7 +21,7 @@ const App = () => {
           <Route exact path="/" component={HomePage}/>
           <Route exact path="/players" component={TeamsList}/>
           <Route exact path="/players_settings" component={PlayersSettings}/>
-
+          <Route exact path="/players_crosshairs" component={PlayersCrosshairs}/>
           <Route
               exact
               path="/signin"

@@ -4,7 +4,7 @@ import './playerssettings.styles.scss'
 
 const PlayersSettings = () => {
   return (
-    <h1>Hello</h1>
+    <h1>Players Settings Page</h1>
   )
 }
 
