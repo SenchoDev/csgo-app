@@ -9,6 +9,7 @@ $color-secondary-light:#0C0E25;
   padding-right: 7vw;
   justify-content: flex-end;
   align-items: center;
+  
   &__text{
     padding-right: 4rem;
     text-decoration: none;
@@ -26,7 +27,8 @@ $color-secondary-light:#0C0E25;
       }
     }
     &-signin{
-      padding-left: 6rem
+      padding-left: 6rem;
+      
     }
   }
 }

@@ -10,10 +10,10 @@ const Header = () => {
       <Link className="header__text header__text-red" to="/players">
         TEAMS & PLAYERS CROSSHAIRS
       </Link>
-      <Link className="header__text" target="_blank">CSGO RESOLUTIONS</Link>
+      <a className="header__text" href="https://csgoresolutions.com/" target="_blank" rel="noopener noreferrer" >CSGO RESOLUTIONS</a>
       <Link className="header__text">FAQ</Link>
       <Link className="header__text header__text-signin" to="/signin">
-        SIGN IN &#8594;
+        Sign In &#8594;
       </Link>
     </div>
   );
