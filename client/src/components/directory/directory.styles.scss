@@ -1,8 +1,6 @@
-.directory-menu{
+.directory-menu {
   display: grid;
-  display: grid;
-    grid-template-columns: repeat(auto-fill, 25rem);
-    grid-column-gap: 4.2rem;
-    grid-row-gap: 7rem;
+  grid-template-columns: repeat(auto-fill, 25rem);
+  grid-column-gap: 4.2rem;
+  grid-row-gap: 7rem;
 }
-

@@ -18,7 +18,7 @@ const INITIAL_STATE = {
       team: "G2",
       imageUrl: "https://i.ibb.co/9NGMRg4/g2.png",
       color: "#000000",
-      players: ["AmaNek", "huNter", "JaCkz", "kennyS", "kennyS"],
+      players: ["AmaNek", "huNter", "JaCkz", "kennyS", "nexa"],
       id: 3,
     },
     
@@ -26,6 +26,7 @@ const INITIAL_STATE = {
       team: "Na'Vi",
       imageUrl: "https://i.ibb.co/kJZktVq/na-vi.png",
       color: "#FFF200",
+      teamColor: "#000000",
       players: ["Boombl4", "electronic", "flamie", "Perfecto", "s1mple"],
       id: 4,
     },

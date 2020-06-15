@@ -14,7 +14,7 @@ const Directory = ({ sections }) => {
     <div className="directory-menu">
      {sections.map(({ id , ...otherItemsProps }) => (
        <TeamCard key={id} {...otherItemsProps }/>
-     ))}  
+     ))} 
     </div>
   )
 }

@@ -10,6 +10,7 @@ import TeamsList from './pages/teamslist/teamslist.component'
 import PlayersSettings from './pages/playerssettings/playerssettings.component'
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component'
 import PlayersCrosshairs from './pages/playerscrosshairs/playerscrosshairs.component'
+import Footer from './components/footer/footer.component'
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
             />
         </Switch>
       </main>
+      <Footer />
     </div>
   );
 };
