@@ -11,7 +11,7 @@ const Header = () => {
         TEAMS & PLAYERS CROSSHAIRS
       </Link>
       <a className="header__text" href="https://csgoresolutions.com/" target="_blank" rel="noopener noreferrer" >CSGO RESOLUTIONS</a>
-      <Link className="header__text">FAQ</Link>
+      <Link className="header__text" to="/signin">FAQ</Link>
       <Link className="header__text header__text-signin" to="/signin">
         Sign In &#8594;
       </Link>
