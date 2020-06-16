@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 
+import { signUpStart } from "../../redux/user/user.actions";
+
 import "./sign-up.styles.scss";
 
 const SignUp = () => {
@@ -23,7 +25,7 @@ const SignUp = () => {
       return;
     }
 
-    //signUpStart({ displayName, email, password });
+    signUpStart({ displayName, email, password });
   };
 
   const handleChange = (event) => {
@@ -33,9 +35,9 @@ const SignUp = () => {
 
   return (
     <div className="sign-up">
-      <h2 className="sign-up__heading">I already have an account</h2>
+      <h2 className="sign-up__heading">I do not have an account</h2>
       <span className="sign-up__span">
-        Sign in with your email and password
+        Sign up with your email and password
       </span>
       <form onSubmit={handleSubmit} className="sign-up-form">
         <FormInput
