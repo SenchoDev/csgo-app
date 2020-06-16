@@ -1,13 +1,13 @@
 import React from "react";
-
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
+import { Link } from "react-router-dom";
 
 import { selectCurrentUser } from "../../redux/user/user.selectors";
 
-import "./header.styles.scss";
+import { ReactComponent as ExitLogo } from "../../assets/logout.svg";
 
-import { Link } from "react-router-dom";
+import "./header.styles.scss";
 
 const Header = ({ currentUser }) => {
   return (
@@ -27,7 +27,10 @@ const Header = ({ currentUser }) => {
         FAQ
       </Link>
       {currentUser ? (
-        <h3 className="header__text header__text-signin">Sign Out &#8594;</h3>
+        <div className="header__signout">
+          <span href="#" className="header__text header__text-signin">Sign Out</span>
+          <ExitLogo className="header__signout--logo" />
+        </div>
       ) : (
         <Link className="header__text header__text-signin" to="/signin">
           Sign In &#8594;

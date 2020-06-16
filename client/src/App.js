@@ -1,7 +1,7 @@
-import React from "react";
-import { Switch, Route } from 'react-router-dom'
-
-import "./App.scss";
+import React, { useEffect }from "react";
+import { Switch, Route, Redirect } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { createStructuredSelector } from 'reselect'
 
 import Navbar from './components/navbar/navbar.component'
 import Header from './components/header/header.component'
@@ -10,9 +10,18 @@ import TeamsList from './pages/teamslist/teamslist.component'
 import PlayersSettings from './pages/playerssettings/playerssettings.component'
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component'
 import PlayersCrosshairs from './pages/playerscrosshairs/playerscrosshairs.component'
-import Footer from './components/footer/footer.component'
+import Footer from './components/footer/footer.component';
 
-const App = () => {
+import { selectCurrentUser } from './redux/user/user.selectors'
+import { checkUserSession } from "./redux/user/user.actions";
+
+import "./App.scss";
+
+const App = ({ checkUserSession, currentUser }) => {
+  useEffect(() => {
+    checkUserSession();
+  }, [checkUserSession])
+
   return (
     <div className="container">
       <Navbar />
@@ -26,7 +35,7 @@ const App = () => {
           <Route
               exact
               path="/signin"
-              component={SignInAndSignUpPage }
+              render={() => currentUser ? <Redirect to="/"/> : <SignInAndSignUpPage/>}
             />
         </Switch>
       </main>
@@ -34,9 +43,10 @@ const App = () => {
     </div>
   );
 };
-
-// <div className="child-1"><h1 className="child-1-inner">hey</h1>
-//       </div>
-
-
-export default App;
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
+})
+const mapDispatchToProps = (dispatch) => ({
+  checkUserSession: () => dispatch(checkUserSession())
+})
+export default connect(mapStateToProps, mapDispatchToProps)(App);

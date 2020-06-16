@@ -12,8 +12,6 @@ import { store, persistor } from "./redux/store";
 import * as serviceWoker from "./serviceWorker";
 
 ReactDOM.render(
-  //   <BrowserRouter>
-  //     <PersistGate persistor={persistor}>
   <BrowserRouter>
     <Provider store={store}>
     <PersistGate persistor={persistor}>
@@ -21,7 +19,6 @@ ReactDOM.render(
       </PersistGate>
     </Provider>
   </BrowserRouter>,
-  // </Provider>
   document.getElementById("root")
 );
 
