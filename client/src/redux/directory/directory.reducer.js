@@ -49,7 +49,7 @@ const INITIAL_STATE = {
       imageUrl: "https://i.ibb.co/vZWT3Cn/mousesports.png",
       color: "#B11739",
       players: ["ChrisJ", "Karrigan", "ropz", "frozen", "woxic"],
-      id: 6,
+      id: 7,
     },
 
     
@@ -58,7 +58,7 @@ const INITIAL_STATE = {
       imageUrl: "https://i.ibb.co/Lh9LDnm/furia.png",
       color: "#000000",
       players: ["HEN1", "arT", "yuurih", "VINI", "KSCERATO"],
-      id: 1,
+      id: 8,
     },
   ],
 };

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 
-import { signUpStart } from "../../redux/user/user.actions";
+//import { signUpStart } from "../../redux/user/user.actions";
 
 import "./sign-up.styles.scss";
 
@@ -25,7 +25,7 @@ const SignUp = () => {
       return;
     }
 
-    signUpStart({ displayName, email, password });
+    //signUpStart({ displayName, email, password });
   };
 
   const handleChange = (event) => {
