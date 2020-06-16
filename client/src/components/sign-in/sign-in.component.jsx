@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import FormInput from "../form-input/form-input.component";
+import CustomButton from '../custom-button/custom-button.component'
 
 import "./sign-in.styles.scss";
 
@@ -11,7 +12,7 @@ const SignIn = () => {
   });
 
   const { email, password } = userCredentials;
-  console.log(email)
+  console.log(email);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -45,7 +46,17 @@ const SignIn = () => {
           label="PASSWORD"
           required
         />
-
+        <div className="buttons">
+          <CustomButton type="submit">Sign in</CustomButton>
+          <CustomButton
+            type="button"
+            onClick={handleChange}
+            isGoogleSignIn
+          >
+            Sign in with google
+          </CustomButton>
+          
+        </div>
       </form>
     </div>
   );
