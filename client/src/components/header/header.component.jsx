@@ -4,12 +4,13 @@ import { createStructuredSelector } from "reselect";
 import { Link } from "react-router-dom";
 
 import { selectCurrentUser } from "../../redux/user/user.selectors";
+import { signOutStart } from '../../redux/user/user.actions'
 
 import { ReactComponent as ExitLogo } from "../../assets/logout.svg";
 
 import "./header.styles.scss";
 
-const Header = ({ currentUser }) => {
+const Header = ({ currentUser, signOutStart }) => {
   return (
     <div className="header">
       <Link className="header__text header__text-red" to="/players">
@@ -27,7 +28,7 @@ const Header = ({ currentUser }) => {
         FAQ
       </Link>
       {currentUser ? (
-        <div className="header__signout">
+        <div onClick={signOutStart} className="header__signout">
           <span href="#" className="header__text header__text-signin">Sign Out</span>
           <ExitLogo className="header__signout--logo" />
         </div>
@@ -44,4 +45,8 @@ const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
 });
 
-export default connect(mapStateToProps)(Header);
+const mapDispatchToProps = (dispatch) => ({
+  signOutStart: () => dispatch(signOutStart())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

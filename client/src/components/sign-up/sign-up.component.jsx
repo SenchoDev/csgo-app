@@ -1,13 +1,14 @@
 import React, { useState } from "react";
+import { connect } from 'react-redux'
 
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 
-//import { signUpStart } from "../../redux/user/user.actions";
+import { signUpStart } from "../../redux/user/user.actions";
 
 import "./sign-up.styles.scss";
 
-const SignUp = () => {
+const SignUp = ({ signUpStart }) => {
   const [userCredentials, setUserCredentials] = useState({
     displayName: "",
     email: "",
@@ -25,12 +26,12 @@ const SignUp = () => {
       return;
     }
 
-    //signUpStart({ displayName, email, password });
+    signUpStart({ displayName, email, password });
   };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setUserCredentials({ ...userCredentials, [name]: value });
+    setUserCredentials({...userCredentials, [name]: value });
   };
 
   return (
@@ -45,7 +46,7 @@ const SignUp = () => {
           name="displayName"
           value={displayName}
           onChange={handleChange}
-          label="Display Name"
+          label="DISPLAY NAME"
           required
         />
         <FormInput
@@ -53,7 +54,7 @@ const SignUp = () => {
           name="email"
           value={email}
           onChange={handleChange}
-          label="Email"
+          label="EMAIL"
           required
         />
         <FormInput
@@ -61,7 +62,7 @@ const SignUp = () => {
           name="password"
           value={password}
           onChange={handleChange}
-          label="Password"
+          label="PASSWORD"
           required
         />
         <FormInput
@@ -69,7 +70,7 @@ const SignUp = () => {
           name="confirmPassword"
           value={confirmPassword}
           onChange={handleChange}
-          label="Confirm Password"
+          label="CONFIRM PASSWORD"
           required
         />
         <div className="buttons">
@@ -80,4 +81,8 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+const mapDispatchToProps = (dispatch) => ({
+  signUpStart: (userCredentials) => dispatch(signUpStart(userCredentials)),
+});
+
+export default connect(null, mapDispatchToProps)(SignUp);
