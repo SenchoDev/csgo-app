@@ -13,6 +13,7 @@ import "./header.styles.scss";
 const Header = ({ currentUser, signOutStart }) => {
   return (
     <div className="header">
+      <div className="blur"></div>
       <Link className="header__text header__text-red" to="/players">
         TEAMS & PLAYERS CROSSHAIRS
       </Link>

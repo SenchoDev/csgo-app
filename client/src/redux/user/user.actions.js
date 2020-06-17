@@ -22,6 +22,9 @@ export const signInFailure = (error) => ({
 export const checkUserSession = () => ({
   type: UserActionTypes.CHECK_USER_SESSION,
 });
+export const togglePopUp = () => ({
+  type: UserActionTypes.TOGGLE_POPUP
+})
 
 
 export const signUpStart = userCredentials => ({

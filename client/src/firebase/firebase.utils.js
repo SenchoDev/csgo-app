@@ -50,10 +50,11 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 
 export const convertTeamsSnapshotToMap = (teams) => {
   const transformedTeams = teams.docs.map(doc => {
-    const {team, color, imageUrl, players } = doc.data();
+    const {team, color, imageUrl, players, teamColor } = doc.data();
 
     return {
       id: doc.id,
+      teamColor,
       team,
       color,
       imageUrl,

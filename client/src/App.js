@@ -26,6 +26,7 @@ const App = ({ checkUserSession, currentUser }) => {
       <Navbar />
       <Header />
       <main className="main-wrapper">
+        <div className="blur"></div>
         <Switch>
           <Route exact path="/" component={HomePage}/>
           <Route exact path="/players" component={TeamsList}/>
@@ -43,7 +44,7 @@ const App = ({ checkUserSession, currentUser }) => {
   );
 };
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser,
+  currentUser: selectCurrentUser
 })
 const mapDispatchToProps = (dispatch) => ({
   checkUserSession: () => dispatch(checkUserSession()),
