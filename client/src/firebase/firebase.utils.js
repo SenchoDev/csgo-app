@@ -53,6 +53,7 @@ export const convertTeamsSnapshotToMap = (teams) => {
     const {team, color, imageUrl, players } = doc.data();
 
     return {
+      id: doc.id,
       team,
       color,
       imageUrl,
