@@ -1,7 +1,7 @@
 import firebase from "firebase/app"; // we need base import for firestore and auth
 import "firebase/firestore"; // database
 import "firebase/auth";
-
+import TEAM_DATA from '../redux/teams/teams.data'
 const config = {
   apiKey: "AIzaSyAd3g9Kbjdxb3tilBM2-9QJ1r-r42JfqWs",
   authDomain: "csgo-app-b3127.firebaseapp.com",
@@ -29,6 +29,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   const userRef = firestore.doc(`users/${userAuth.uid}`);
 
   const snapShot = await userRef.get();
+  //addCollectionAndDocuments('teams', TEAM_DATA)
 
   if (!snapShot.exists) {
     const { displayName, email } = userAuth;
