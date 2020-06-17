@@ -51,8 +51,6 @@ const INITIAL_STATE = {
       players: ["ChrisJ", "Karrigan", "ropz", "frozen", "woxic"],
       id: 7,
     },
-
-    
     {
       team: "Furia",
       imageUrl: "https://i.ibb.co/Lh9LDnm/furia.png",
