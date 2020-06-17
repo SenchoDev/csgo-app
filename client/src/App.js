@@ -12,19 +12,14 @@ import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up
 import PlayersCrosshairs from './pages/playerscrosshairs/playerscrosshairs.component'
 import Footer from './components/footer/footer.component';
 
-import { addCollectionAndDocuments } from './firebase/firebase.utils'
-
 import { selectCurrentUser } from './redux/user/user.selectors'
 import { checkUserSession } from "./redux/user/user.actions";
-import { selectTeamsForPreview } from './redux/teams/teams.selector';
-
 import "./App.scss";
 
-const App = ({ checkUserSession, currentUser, teamsArray}) => {
+const App = ({ checkUserSession, currentUser }) => {
   useEffect(() => {
     checkUserSession();
-    addCollectionAndDocuments('teams', teamsArr)
-  }, [checkUserSession, addCollectionAndDocuments])
+  }, [checkUserSession])
 
   return (
     <div className="container">
@@ -49,9 +44,8 @@ const App = ({ checkUserSession, currentUser, teamsArray}) => {
 };
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
-  teamsArray: selectTeamsForPreview
 })
 const mapDispatchToProps = (dispatch) => ({
-  checkUserSession: () => dispatch(checkUserSession())
+  checkUserSession: () => dispatch(checkUserSession()),
 })
 export default connect(mapStateToProps, mapDispatchToProps)(App);

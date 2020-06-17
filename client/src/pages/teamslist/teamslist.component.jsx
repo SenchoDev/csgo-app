@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+
+import TeamsDirectory from '../../components/teams-directory/teams-directory.component'
+
+import { fetchTeamsStart } from '../../redux/teams/teams.actions'
 
 import './teamslist.styles.scss'
 
-const TeamsList = () => {
+const TeamsList = ({ fetchTeamsStart }) => {
+
+  useEffect(() => {
+    fetchTeamsStart();
+  }, [fetchTeamsStart]);
+
   return (
-    <h1>Hey Its TeamsList</h1>
+    <div className="teams-page">
+      <h3 className="teams-page__heading">Top 30 Teams</h3>
+      <TeamsDirectory/>
+    </div>
   )
 }
 
-export default TeamsList
+const mapDispatchToProps = (dispatch) => ({
+  fetchTeamsStart: () => dispatch(fetchTeamsStart()),
+})
+
+export default connect(null, mapDispatchToProps)(TeamsList);

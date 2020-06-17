@@ -1,0 +1,6 @@
+const TeamsActionTypes = {
+  FETCH_TEAMS_START: 'FETCH_TEAMS_START',
+  FETCH_TEAMS_SUCCESS: 'FETCH_TEAMS_SUCCESS',
+  FETCH_TEAMS_FAILURE: 'FETCH_TEAMS_FAILURE'
+}
+export default TeamsActionTypes;
