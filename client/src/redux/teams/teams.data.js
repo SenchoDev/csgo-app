@@ -5,6 +5,68 @@ const TEAMS_DATA = {
     color: "#EF3742",
     players: ["dev1ce", "dupreeh", "gla1ve", "Magisk", "Xyp9x"],
     id: 1,
+    teamsData: [
+      { 
+        name: 'dev1ce',
+        img: 'https://i.ibb.co/5WHm8r3/astralis.png',
+        role: 'awp',
+        crosshairImg: 'https://i.ibb.co/tKc5tLH/dev1ce.jpg',
+        monitor: 'Benq XL2546',
+        mouse: 'Zowie EC2-B',
+        keboard: 'Logitech G-PRO',
+        headset: 'Turtle Beach Elite Pro',
+        mousepad: 'Logitech G640',
+        crosshair: 'cl_crosshair_drawoutline 1;cl_crosshair_outlinethickness 1;cl_crosshaircolor 2;cl_crosshairdot 0;cl_crosshairgap -1;cl_crosshairsize 3;cl_crosshairstyle 4;cl_crosshairthickness 1'
+      },
+      { 
+        name: 'dupreeh',
+        img: 'https://i.ibb.co/5WHm8r3/astralis.png',
+        role: 'rifler',
+        crosshairImg: 'https://i.ibb.co/tKc5tLH/dev1ce.jpg',
+        monitor: 'Benq XL2546',
+        mouse: 'Logitech G903',
+        keboard: 'Logitech g513',
+        headset: 'Logitech G433',
+        mousepad: 'Zowie G-SR-SE',
+        crosshair: 'cl_crosshair_drawoutline 1;cl_crosshair_outlinethickness 1;cl_crosshaircolor 1;cl_crosshairdot 0;cl_crosshairgap -2;cl_crosshairsize 3;cl_crosshairstyle 4;cl_crosshairthickness 1'
+      },
+      { 
+        name: 'gla1ve',
+        img: 'https://i.ibb.co/5WHm8r3/astralis.png',
+        role: 'rifler',
+        crosshairImg: 'https://i.ibb.co/tKc5tLH/dev1ce.jpg',
+        monitor: 'Benq XL2546',
+        mouse: 'Zowie EC1-A',
+        keboard: 'Logitech G-PRO',
+        headset: 'Turtle Beach Elite Pro',
+        mousepad: 'Logitech G640',
+        crosshair: 'cl_crosshair_drawoutline 0;cl_crosshaircolor 1;cl_crosshairdot 0;cl_crosshairgap -2;cl_crosshairsize 3;cl_crosshairstyle 4;cl_crosshairthickness 1'
+      },
+      { 
+        name: 'Magisk',
+        img: 'https://i.ibb.co/5WHm8r3/astralis.png',
+        role: 'rifler',
+        crosshairImg: 'https://i.ibb.co/tKc5tLH/dev1ce.jpg',
+        monitor: 'Benq XL2546',
+        mouse: 'Zowie EC2-A',
+        keboard: 'Logitech G-PRO',
+        headset: 'Turtle Beach Elite Pro',
+        mousepad: 'Logitech G640',
+        crosshair: 'cl_crosshair_drawoutline 1;cl_crosshaircolor 0;cl_crosshairdot 0;cl_crosshairgap -1;cl_crosshairsize 1;cl_crosshairstyle 4;cl_crosshairthickness 0'
+      },
+      { 
+        name: 'Xyp9x',
+        img: 'https://i.ibb.co/5WHm8r3/astralis.png',
+        role: 'rifler',
+        crosshairImg: 'https://i.ibb.co/tKc5tLH/dev1ce.jpg',
+        monitor: 'Benq XL2546',
+        mouse: 'Zowie FK2',
+        keboard: 'Logitech G-PRO',
+        headset: 'Turtle Beach Elite Pro',
+        mousepad: 'Logitech G640',
+        crosshair: 'cl_crosshair_drawoutline 0;cl_crosshaircolor 1;cl_crosshairdot 0;cl_crosshairgap 0;cl_crosshairsize 5;cl_crosshairstyle 4;cl_crosshairthickness 0.5'
+      }
+    ]
   },
   fnatic: {
     team: "Fnatic",
