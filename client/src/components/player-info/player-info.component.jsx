@@ -1,10 +1,10 @@
 import React from "react";
 
+import Settings from '../settings-overview/settings-overview.component'
+
 import "./player-info.styles.scss";
 
 import Img from "../../assets/Brollan.png";
-
-
 import Target from "../../assets/target.png";
 import Computer from "../../assets/computer.png";
 import RedHeart from "../../assets/pink.png";
@@ -45,6 +45,8 @@ const PlayerInfo = () => (
           </div>
         </div>
       </div>
+
+      <Settings/>
 
     </div>
   </div>

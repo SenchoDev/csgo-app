@@ -25,9 +25,12 @@
 
   &__grid{
     padding: 6rem 11rem;
+    display: grid;
+    align-self: start;
   }
   &__section{
     display: flex;
+    margin-bottom: 4rem;
     
     & img {
       padding-right: 6rem;
