@@ -11,22 +11,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
 
   &__heading{
     font-size: 2.4rem;
     &--black{
       color: #000000;
+
     }
   }
   &__grey-box{
+    cursor: pointer;
     background-color:#EBEBEB;
     height: 5.6rem;
 
   }
 
   &__white-box{
+    cursor: pointer;
     background-color:#FFFFFF;
     height: 5.6rem;
   }
@@ -38,6 +40,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    &:hover{
+      color: #6843CF;
+    }
   }
   &__logo{
     height: 8.3rem;

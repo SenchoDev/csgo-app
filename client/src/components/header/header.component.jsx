@@ -10,9 +10,9 @@ import { ReactComponent as ExitLogo } from "../../assets/logout.svg";
 
 import "./header.styles.scss";
 
-const Header = ({ currentUser, signOutStart }) => {
+const Header = ({ currentUser, signOutStart}) => {
   return (
-    <div className="header">
+    <div className='header'>
       <div className="blur"></div>
       <Link className="header__text header__text-red" to="/players">
         TEAMS & PLAYERS CROSSHAIRS

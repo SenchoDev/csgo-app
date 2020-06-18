@@ -80,3 +80,9 @@ body {
   grid-area: main;
   background-color: $color-secondary-light;
 }
+
+.blur{
+  filter: brightness(70%) blur(5px);
+  user-select: none;
+}
+

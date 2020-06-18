@@ -7,6 +7,11 @@ export const selectTeams = createSelector(
   (teamsData) => teamsData.teams
 );
 
+export const selectPlayersInfo = createSelector(
+  [selectTeamsData],
+  (teamsData) => teamsData.playersInfo
+);
+
 export const selectTeamsForPreview = createSelector(
   [selectTeams],
   (teams) => teams ? Object.keys(teams).map((key) => teams[key]) :  []

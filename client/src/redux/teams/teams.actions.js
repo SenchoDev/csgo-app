@@ -13,3 +13,8 @@ export const fetchTeamsFailure = errorMessage => ({
   type: TeamsActionTypes.FETCH_TEAMS_FAILURE,
   payload: errorMessage
 })
+
+export const addPlayersInfo = info => ({
+  type: TeamsActionTypes.ADD_PLAYERS_INFO,
+  payload: info,
+})
