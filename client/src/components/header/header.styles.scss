@@ -1,5 +1,4 @@
-$color-secondary-light:#0C0E25;
-
+$color-secondary-light: #0c0e25;
 
 .header {
   grid-area: header-main;
@@ -9,42 +8,49 @@ $color-secondary-light:#0C0E25;
   padding-right: 7vw;
   justify-content: flex-end;
   align-items: center;
-  
-  &__text{
+
+  &__text {
     padding-right: 4rem;
     text-decoration: none;
     font-size: 2.1rem;
-    color: #FFFFFF;
-    transition: all .5s;
+    color: #ffffff;
+    transition: all 0.5s;
     cursor: pointer;
-    &:hover{
-      color: #FD074E;
+
+    &:hover {
+      background-image: linear-gradient(to right, #fd074e, #f67062);
+      -webkit-background-clip: text;
+      color: transparent;
     }
-    &-red{
-      color: #FD074E;
-      &:hover{
-        color: #21AC54;
+    &-red {
+      background-image: linear-gradient(to right, #fd074e, #f67062);
+      -webkit-background-clip: text;
+      color: transparent;
+      &:hover {
+        color: #21ac54;
+        background-image: linear-gradient(to right, #80ff72, #7ee8fa);
+        -webkit-background-clip: text;
+        color: transparent;
       }
     }
-    &-signin{
+    &-signin {
       padding-left: 6rem;
-      
     }
   }
 
-  &__signout{
+  &__signout {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    &:hover &--logo{
-      fill: #FD074E;
+    &:hover &--logo {
+      fill: #fd074e;
     }
 
-    &--logo{
+    &--logo {
       margin-top: 0.2rem;
       cursor: pointer;
-      transition: all .5s;
+      transition: all 0.5s;
       margin-left: -2.4rem;
       fill: #ffffff;
       height: 2.5rem;

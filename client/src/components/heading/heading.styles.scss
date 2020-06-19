@@ -1,65 +1,65 @@
-.heading{
+.heading {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-  &__primary{
+
+  &__primary {
     font-size: 5rem;
-    color: #FFFFFF;
+    color: #ffffff;
     font-weight: 400;
   }
 
-  &__secondary{
+  &__secondary {
     font-size: 3.2rem;
-    color: #21AC54;
     font-weight: 400;
     padding-top: 1.2rem;
+    background-image: linear-gradient(to right, #80ff72, #7ee8fa);
+    -webkit-background-clip: text;
+    color: transparent;
   }
 
-  &__steps{
+  &__steps {
     display: flex;
-    padding-top:3.2rem;
-
+    padding-top: 3.2rem;
   }
 
-  &__box{
-    background-color: #FD074E;
+  &__box {
+    background-color: #fd074e;
     padding: 0.5rem 2.5rem;
     padding-left: 4rem;
-    margin-right:2rem;
+    margin-right: 2rem;
     border-radius: 2.5rem;
 
     position: relative;
 
-    &--purple{
-      background-color: #6843CF;
+    &--purple {
+      background-color: #6843cf;
     }
 
-    &--text{
+    &--text {
       font-size: 1.6rem;
       font-weight: 400;
     }
   }
-  &__num{
+  &__num {
     position: absolute;
     left: 0;
     top: 3;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
     margin-left: 0.6rem;
 
-
     display: flex;
     justify-content: center;
     align-items: center;
-    &--purple{
-      color: #6843CF !important;
+    &--purple {
+      color: #6843cf !important;
     }
-  
+
     & span {
-      color: #FD074E;
+      color: #fd074e;
       font-size: 1.6rem;
     }
   }
