@@ -18,3 +18,7 @@ export const addPlayersInfo = info => ({
   type: TeamsActionTypes.ADD_PLAYERS_INFO,
   payload: info,
 })
+
+export const togglePlayersInfoHidden = () => ({
+  type: TeamsActionTypes.TOGGLE_PLAYERS_INFO_HIDDEN
+})

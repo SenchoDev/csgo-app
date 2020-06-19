@@ -5,10 +5,10 @@ import { createStructuredSelector } from "reselect";
 import Settings from "../settings-overview/settings-overview.component";
 import InfoButton from "../info-buton/info-button.component";
 import { selectPlayersInfo } from "../../redux/teams/teams.selector";
+import { togglePlayersInfoHidden } from "../../redux/teams/teams.actions";
 
 import "./player-info.styles.scss";
 
-import Img from "../../assets/Brollan.png";
 import Target from "../../assets/target.png";
 import Computer from "../../assets/computer.png";
 import RedHeart from "../../assets/pink.png";
@@ -16,14 +16,12 @@ import PurpleHeart from "../../assets/purple.png";
 import Copy from "../../assets/copy.png";
 import Close from "../../assets/close.png";
 
-const PlayerInfo = ({
-  info: { name, img, settings, role },
-}) => {
+const PlayerInfo = ({ info: { name, img, settings, role }, togglePlayersInfoHidden }) => {
   return (
     <div className="info">
       <div className="info__header">
         <h3 className="info__heading">{name}</h3>
-        <img src={Close} alt="btn" className="info__close" />
+        <img src={Close} alt="btn" className="info__close" onClick={togglePlayersInfoHidden}/>
       </div>
       <div className="info__grid">
         <div className="info__section">
@@ -58,4 +56,8 @@ const mapStateToProps = createStructuredSelector({
   info: selectPlayersInfo,
 });
 
-export default connect(mapStateToProps)(PlayerInfo);
+const mapDispatchToProps = (dispatch) => ({
+  togglePlayersInfoHidden: () => dispatch(togglePlayersInfoHidden()),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(PlayerInfo);

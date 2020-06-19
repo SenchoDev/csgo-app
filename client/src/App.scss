@@ -46,8 +46,6 @@ html {
   font-size: 62.5%;
 }
 
-
-
 @mixin respond($breakpoint){
   @if $breakpoint == last{
     @media  only screen and (max-width: 25em){@content}; //600p
@@ -84,5 +82,6 @@ body {
 .blur{
   filter: brightness(70%) blur(5px);
   user-select: none;
+  pointer-events:none;
 }
 

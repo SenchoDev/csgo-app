@@ -16,6 +16,11 @@ const teamsReducer = (state = INITIAL_STATE, action) => {
         ...state,
         playersInfo: action.payload
       };
+    case TeamsActionTypes.TOGGLE_PLAYERS_INFO_HIDDEN:
+      return{
+        ...state,
+        playersInfo: null,
+      }
     case TeamsActionTypes.FETCH_TEAMS_START:
       return {
         ...state,
