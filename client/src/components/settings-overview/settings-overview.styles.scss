@@ -14,7 +14,9 @@
   }
   &__heading{
     padding-left: 1rem;
-    color: #0A2B47;
+    background-image: linear-gradient(to right, #0C0C0C, #4834D4);
+    background-clip: text;
+    color: transparent;
     font-size: 2.2rem;
     font-weight: 400;
   }

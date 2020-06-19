@@ -19,17 +19,16 @@ $color-secondary-light: #0c0e25;
 
     &:hover {
       background-image: linear-gradient(to right, #fd074e, #f67062);
-      -webkit-background-clip: text;
+      background-clip: text;
       color: transparent;
     }
     &-red {
       background-image: linear-gradient(to right, #fd074e, #f67062);
-      -webkit-background-clip: text;
+      background-clip: text;
       color: transparent;
       &:hover {
-        color: #21ac54;
         background-image: linear-gradient(to right, #80ff72, #7ee8fa);
-        -webkit-background-clip: text;
+        background-clip: text;
         color: transparent;
       }
     }

@@ -31,10 +31,13 @@
   &__section{
     display: flex;
     margin-bottom: 4rem;
-    
-    & img {
-      padding-right: 6rem;
-    }
+  
+  }
+  &__player{
+    width: 27rem;
+    padding-right: 6rem;
+      height: 27rem;
+      object-fit: cover;
   }
   &__overview{
     display: flex;
@@ -70,35 +73,21 @@
   &__text{
     color: #000000;
     font-size: 1.8rem;
-    margin-left: -5rem;
+    padding-left: 1.5rem;
     &:hover{
       color: #FD074E;
     }
   }
-
-}
-
-.big-button{
-  background-color: #FD074E;
-  border-radius: 0.5rem;
-  display: flex;
-  align-items: center;
-  cursor:pointer;
-
-  &:hover{
-    transform: translateY(-1.5px);
-    box-shadow: 0 1rem 2rem rgba(#000000, 0.2);
-    &::after{
-      transform: scale(1.5);
-      opacity: 0;
-    }
+  &__footer{
+    padding-top:4rem;
+    display: flex;
+    align-items: flex-end;
   }
-  &__img{
-    padding-left: 2.5rem;
-  }
-
-  &__text{
-    margin-left: -4.8rem;
-    font-size: 2.2rem;
+  &__config{
+    margin-bottom: -0.5rem;
+    padding-left: 2rem;
+    color: #FD074E;
+    font-size: 1.8rem;
+    text-decoration: underline;
   }
 }
