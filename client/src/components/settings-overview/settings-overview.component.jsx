@@ -9,7 +9,7 @@ import Keyboard from "../../assets/gaming.png";
 import MousePad from "../../assets/virtual-reality.png";
 import Monitor from "../../assets/television.png";
 
-const Settings = () => {
+const Settings = ({settings: {headset, keyboard, monitor, mouse, mousepad}}) => {
   return (
     <div className="overview">
       <div className="overview__item">
@@ -33,19 +33,19 @@ const Settings = () => {
         <h3 className="overview__heading">Mousepad</h3>
       </div>
       <div className="overview__item">
-        <p className="overview__text">Turtle Beach Elite Pro</p>
+        <p className="overview__text">{headset}</p>
       </div>
       <div className="overview__item">
-        <p className="overview__text">Benq XL2546</p>
+        <p className="overview__text">{monitor}</p>
       </div>
       <div className="overview__item">
-        <p className="overview__text">Zowie EC2-B</p>
+        <p className="overview__text">{mouse}</p>
       </div>
       <div className="overview__item">
-        <p className="overview__text">Logitech G-PRO</p>
+        <p className="overview__text">{keyboard}</p>
       </div>
       <div className="overview__item">
-        <p className="overview__text">Logitech G-PRO</p>
+        <p className="overview__text">{mousepad}</p>
       </div>
     </div>
   );
