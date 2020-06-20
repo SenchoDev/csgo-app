@@ -6,3 +6,8 @@ export const selectIfCopied = createSelector(
   [selectSettingsData],
   (settings) => settings.copied
 )
+export const selectFavoriteCrosshairs = createSelector(
+  [selectSettingsData],
+  (settings) => settings.favoriteCrosshairs
+)
+
