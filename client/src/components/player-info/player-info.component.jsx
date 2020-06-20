@@ -7,7 +7,7 @@ import Settings from "../settings-overview/settings-overview.component";
 import InfoButton from "../info-buton/info-button.component";
 import { selectPlayersInfo } from "../../redux/teams/teams.selector";
 import { togglePlayersInfoHidden } from "../../redux/teams/teams.actions";
-import { toggleCopiedButton } from "../../redux/settings/settings.actions";
+import { toggleCopiedButton, addCrosshair } from "../../redux/settings/settings.actions";
 import { selectIfCopied } from "../../redux/settings/settings.selector";
 
 import "./player-info.styles.scss";
@@ -20,10 +20,11 @@ import ClipboardImg from "../../assets/copy.png";
 import Close from "../../assets/close.png";
 
 const PlayerInfo = ({
-  info: { name, img, settings, role, crosshair },
+  info: { name, img, settings, role, crosshair, team, id },
   togglePlayersInfoHidden,
   toggleCopiedButton,
   copied,
+  addCrosshair
 }) => {
   return (
     <div className="info">
@@ -44,7 +45,7 @@ const PlayerInfo = ({
             <span className="info__role">{role}</span>
             <div className="info__wrap">
               <InfoButton img={Target} text={"Crosshair preview"} />
-              <div className="info__save">
+              <div className="info__save" onClick={() => addCrosshair({team, name, crosshair, id})}>
                 <img src={RedHeart} alt="copy" />
                 <p className="info__text">Save Crosshair settings</p>
               </div>
@@ -89,6 +90,7 @@ const mapStateToProps = createStructuredSelector({
 const mapDispatchToProps = (dispatch) => ({
   togglePlayersInfoHidden: () => dispatch(togglePlayersInfoHidden()),
   toggleCopiedButton: (boolVal) => dispatch(toggleCopiedButton(boolVal)),
+  addCrosshair: (item) => dispatch(addCrosshair(item)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlayerInfo);

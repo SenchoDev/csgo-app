@@ -7,7 +7,8 @@ const INITIAL_STATE = {
       players: ["dev1ce", "dupreeh", "gla1ve", "Magisk", "Xyp9x"],
       id: 1,
       teamsData: [
-        {
+        { 
+          id: 1,
           name: "dev1ce",
           img: "https://i.ibb.co/nnDrbC6/dev1ice.jpg",
           role: "awp",
@@ -23,6 +24,7 @@ const INITIAL_STATE = {
             "cl_crosshair_drawoutline 1;cl_crosshair_outlinethickness 1;cl_crosshaircolor 2;cl_crosshairdot 0;cl_crosshairgap -1;cl_crosshairsize 3;cl_crosshairstyle 4;cl_crosshairthickness 1",
         },
         {
+          id: 2,
           name: "dupreeh",
           img: "https://i.ibb.co/YdXj7bH/Dupreeh-CS-GO.jpg",
           role: "rifler",
@@ -38,6 +40,7 @@ const INITIAL_STATE = {
             "cl_crosshair_drawoutline 1;cl_crosshair_outlinethickness 1;cl_crosshaircolor 1;cl_crosshairdot 0;cl_crosshairgap -2;cl_crosshairsize 3;cl_crosshairstyle 4;cl_crosshairthickness 1",
         },
         {
+          id: 3,
           name: "gla1ve",
           img: "https://i.ibb.co/w72F4Mv/gla1ive.jpg",
           role: "rifler",
@@ -53,6 +56,7 @@ const INITIAL_STATE = {
             "cl_crosshair_drawoutline 0;cl_crosshaircolor 1;cl_crosshairdot 0;cl_crosshairgap -2;cl_crosshairsize 3;cl_crosshairstyle 4;cl_crosshairthickness 1",
         },
         {
+          id: 4,
           name: "Magisk",
           img: "https://i.ibb.co/NCxnkx8/magisk.jpg",
           role: "rifler",
@@ -69,6 +73,7 @@ const INITIAL_STATE = {
             "cl_crosshair_drawoutline 1;cl_crosshaircolor 0;cl_crosshairdot 0;cl_crosshairgap -1;cl_crosshairsize 1;cl_crosshairstyle 4;cl_crosshairthickness 0",
         },
         {
+          id: 5,
           name: "Xyp9x",
           img: "https://i.ibb.co/gyTYmbT/xyp9x.jpg",
           role: "rifler",
@@ -92,7 +97,8 @@ const INITIAL_STATE = {
       players: ["Brollan", "Golden", "JW", "KRIMZ", "flusha"],
       id: 2,
       teamsData: [
-        {
+        { 
+          id: 6,
           name: "Brollan",
           img: "https://i.ibb.co/8PF6PZx/brollan.jpg",
           role: "rifler",
@@ -108,6 +114,7 @@ const INITIAL_STATE = {
             "cl_crosshair_drawoutline 1;cl_crosshaircolor 1;cl_crosshairdot 0;cl_crosshairgap -2;cl_crosshairsize 2;cl_crosshairstyle 4;cl_crosshairthickness 0",
         },
         {
+          id: 7,
           name: "flusha",
           img: "https://i.ibb.co/9vxWc7q/flusha.png",
           role: "rifler",
@@ -123,6 +130,7 @@ const INITIAL_STATE = {
             "cl_crosshair_drawoutline 0;cl_crosshaircolor 5;cl_crosshairdot 0;cl_crosshairgap -3;cl_crosshairsize 3;cl_crosshairstyle 4;cl_crosshairthickness 1",
         },
         {
+          id: 8,
           name: "Golden",
           img: "https://i.ibb.co/8KWNrvn/golden.jpg",
           role: "rifler",
@@ -138,6 +146,7 @@ const INITIAL_STATE = {
             "cl_crosshair_drawoutline 0; cl_crosshaircolor 1; cl_crosshairdot 0; cl_crosshairgap -2.5; cl_crosshairsize 4; cl_crosshairstyle 4; cl_crosshairthickness 0",
         },
         {
+          id: 9,
           name: "JW",
           img: "https://i.ibb.co/YQ2h17D/jw.png",
           role: "awp",
@@ -154,6 +163,7 @@ const INITIAL_STATE = {
             "cl_crosshair_drawoutline 0;cl_crosshaircolor 1;cl_crosshairdot 0;cl_crosshairgap -1;cl_crosshairsize 4;cl_crosshairstyle 4;cl_crosshairthickness 1",
         },
         {
+          id: 10,
           name: "KRIMZ",
           img: "https://i.ibb.co/tqk743G/krimz.png",
           role: "rifler",
@@ -179,6 +189,7 @@ const INITIAL_STATE = {
       teamsData: [
     
         {
+          id: 11,
           name: "AmaNek",
           img: "https://i.ibb.co/4mxmCH7/amanek.jpg",
           role: "rifler",
@@ -194,6 +205,7 @@ const INITIAL_STATE = {
             "cl_crosshairalpha 200; cl_crosshaircolor 4; cl_crosshaircolor_b 1; cl_crosshaircolor_r 0; cl_crosshaircolor_g 0; cl_crosshairgap -3; cl_crosshairsize 3; cl_crosshairstyle 4; cl_crosshairusealpha 1; cl_crosshairthickness 1; cl_crosshair_drawoutline 1;",
         },
         {
+          id: 12,
           name: "huNter",
           img: "https://i.ibb.co/NtLLSk0/hunter.jpg",
           role: "rifler",
@@ -209,6 +221,7 @@ const INITIAL_STATE = {
             "cl_crosshair_drawoutline 0;cl_crosshaircolor 1;cl_crosshairdot 0;cl_crosshairgap -1;cl_crosshairgap_useweaponvalue 0;cl_crosshairsize 3;cl_crosshairstyle 4;cl_crosshairthickness 1",
         },
         {
+          id: 13,
           name: "JaCkz",
           img: "https://i.ibb.co/42LfgHx/jackz.jpg",
           role: "rifler",
@@ -224,6 +237,7 @@ const INITIAL_STATE = {
             "cl_crosshair_drawoutline 0;cl_crosshaircolor 1;cl_crosshairdot 0;cl_crosshairgap -0.5;cl_crosshairsize 4;cl_crosshairstyle 5;cl_crosshairthickness 0",
         },
         {
+          id: 14,
           name: "kennyS",
           img: "https://i.ibb.co/QfzWvgv/kennyS.jpg",
           role: "awp",
@@ -240,6 +254,7 @@ const INITIAL_STATE = {
             "cl_crosshair_drawoutline 1;cl_crosshair_outlinethickness 1;cl_crosshaircolor 4;cl_crosshairdot 0;cl_crosshairgap -1;cl_crosshairsize 3;cl_crosshairstyle 4;cl_crosshairthickness 1",
         },
         {
+          id: 15,
           name: "nexa",
           img: "https://i.ibb.co/DLk0wST/nexa.jpg",
           role: "rifler",
@@ -267,6 +282,7 @@ const INITIAL_STATE = {
       teamsData: [
     
         {
+          id: 16,
           name: "Boombl4",
           img: "https://i.ibb.co/YdXj7bH/Dupreeh-CS-GO.jpg",
           role: "rifler",
@@ -282,6 +298,7 @@ const INITIAL_STATE = {
             "cl_crosshairgap -3; cl_crosshairsize 3; cl_crosshairalpha 255; cl_crosshaircolor 2; cl_crosshairdot 0; cl_crosshairstyle 4; cl_crosshairusealpha 1; cl_crosshairthickness 0; cl_crosshair_sniper_width 1; cl_crosshair_drawoutline 0;",
         },
         {
+          id: 17,
           name: "electronic",
           img: "https://i.ibb.co/nnDrbC6/dev1ice.jpg",
           role: "rifler",
@@ -297,6 +314,7 @@ const INITIAL_STATE = {
             "cl_crosshair_drawoutline 0;cl_crosshaircolor 1;cl_crosshairdot 0;cl_crosshairgap -3;cl_crosshairsize 4;cl_crosshairstyle 4;cl_crosshairthickness 1",
         },
         {
+          id: 18,
           name: "flamie",
           img: "https://i.ibb.co/w72F4Mv/gla1ive.jpg",
           role: "rifler",
@@ -312,6 +330,7 @@ const INITIAL_STATE = {
             "cl_crosshair_drawoutline 0;cl_crosshaircolor 1;cl_crosshairdot 0;cl_crosshairgap -0.5;cl_crosshairsize 4;cl_crosshairstyle 5;cl_crosshairthickness 0",
         },
         {
+          id: 19,
           name: "Perfecto",
           img: "https://i.ibb.co/NCxnkx8/magisk.jpg",
           role: "rifler",
@@ -327,6 +346,7 @@ const INITIAL_STATE = {
           crosshair:"cl_crosshairalpha 500; cl_crosshairsize 2; cl_crosshairthickness 0; cl_crosshairgap -1.5; cl_crosshair_drawoutline 0; cl_crosshairdot 0; cl_crosshaircolor 4; cl_crosshaircolor_b 44; cl_crosshaircolor_g 95; cl_crosshaircolor_r 27; cl_crosshairstyle 4;",
         },
         {
+          id: 20,
           name: "s1mple",
           img: "https://i.ibb.co/gyTYmbT/xyp9x.jpg",
           role: "awp",
@@ -359,6 +379,7 @@ const INITIAL_STATE = {
       teamsData: [
     
         {
+          id: 26,
           name: "Bymas",
           img: "https://i.ibb.co/N2y6Zhk/bymas.jpg",
           role: "rifler",
@@ -373,6 +394,7 @@ const INITIAL_STATE = {
           crosshair:"cl_crosshair_drawoutline 1; cl_crosshair_outlinethickness 1; cl_crosshairalpha 255; cl_crosshaircolor 5; cl_crosshaircolor_b 0; cl_crosshaircolor_g 255; cl_crosshaircolor_r 0; cl_crosshairdot 0; cl_crosshairgap -2; cl_crosshairscale 4; cl_crosshairsize 2; cl_crosshairstyle 4; cl_crosshairthickness 1",
         },
         {
+          id: 27,
           name: "broky",
           img: "https://i.ibb.co/Z24SpXX/broky.jpg",
           role: "awp",
@@ -388,6 +410,7 @@ const INITIAL_STATE = {
             "cl_crosshairalpha 255; cl_crosshaircolor 4; cl_crosshairdot 1; cl_crosshairgap -2; cl_crosshairsize 1; cl_crosshairstyle 4; cl_crosshairusealpha 1; cl_crosshairthickness 0; cl_crosshair_drawoutline 0; cl_crosshair_sniper_width 1; cl_crosshaircolor_b 0; cl_crosshaircolor_g 0; cl_crosshaircolor_r 255;",
         },
         {
+          id: 28,
           name: "NiKo",
           img: "https://i.ibb.co/NjbFb8k/niko.jpg",
           role: "rifler",
@@ -403,6 +426,7 @@ const INITIAL_STATE = {
             "cl_crosshair_drawoutline 0;cl_crosshaircolor 4;cl_crosshairdot 0;cl_crosshairgap -1;cl_crosshairsize 1;cl_crosshairstyle 4;cl_crosshairthickness 0.5",
         },
         {
+          id: 29,
           name: "rain",
           img: "https://i.ibb.co/DQdY3dZ/rain.jpg",
           role: "rifler",
@@ -418,6 +442,7 @@ const INITIAL_STATE = {
           crosshair:"cl_crosshair_drawoutline 0;cl_crosshaircolor 1;cl_crosshairdot 0;cl_crosshairgap -2;cl_crosshairgap_useweaponvalue 0;cl_crosshairsize 2;cl_crosshairstyle 4;cl_crosshairthickness 0",
         },
         {
+          id: 30,
           name: "coldzera",
           img: "https://i.ibb.co/179ds7w/coldzera.jpg",
           role: "rifler",
