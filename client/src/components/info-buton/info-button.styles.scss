@@ -27,5 +27,8 @@
 .purple-btn{
   background-color: #6843CF;
   width: 27rem;
-  padding: 0.5rem;
+  padding: 0.8rem;
+  &__fix{
+    padding: 5rem;
+  }
 }

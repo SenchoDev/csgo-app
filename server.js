@@ -6,8 +6,6 @@ const compression = require("compression");
 const path = require("path");
 const enforce = require("express-sslify");
 
-if (process.env.NODE_ENV != "production") require("dotenv").config();
-
 
 const app = express();
 const port = process.env.PORT || 5000;
