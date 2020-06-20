@@ -11,7 +11,7 @@ import Monitor from "../../assets/television.png";
 
 const Settings = ({settings: {headset, keyboard, monitor, mouse, mousepad}}) => {
   return (
-    <div className="overview">
+    <div className="overview settings__show">
       <div className="overview__item">
         <img src={Headset} alt="heart" />
         <h3 className="overview__heading">Headset</h3>

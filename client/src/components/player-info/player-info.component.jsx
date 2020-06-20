@@ -11,6 +11,7 @@ import { togglePlayersInfoHidden } from "../../redux/teams/teams.actions";
 import {
   addCrosshair,
   toggleSavedButton,
+  addSettings
 } from "../../redux/settings/settings.actions";
 import {
   selectIfCopied,
@@ -32,14 +33,12 @@ const PlayerInfo = ({
   addCrosshair,
   toggleSavedButton,
   saved,
+  addSettings
 }) => {
   const savingData = () => {
-      addCrosshair({ team, name, crosshair, id }) &&
-      toggleSavedButton(true) &&
-      setTimeout(() => toggleSavedButton(false), 1200);
+    toggleSavedButton(true) && setTimeout(() => toggleSavedButton(false), 1200);
   };
   const [shown, setShown] = useState(false);
-  console.log(shown);
   return (
     <div className="info">
       <div
@@ -71,15 +70,15 @@ const PlayerInfo = ({
               <div
                 className="info__save"
                 onClick={() =>
-                  savingData()
+                  addCrosshair({ team, name, crosshair, id }) && savingData()
                 }
               >
                 <img src={RedHeart} alt="copy" />
                 <p className="info__text">Save Crosshair settings</p>
               </div>
               <InfoButton img={Computer} text={"Players Resolution"} />
-              <div className="info__save">
-                <img src={PurpleHeart} alt="copys" />
+              <div className="info__save" onClick={() => addSettings({ team, name, id, settings }) && savingData()}>
+                <img src={PurpleHeart} alt="copys"/>
                 <p className="info__text">Save User settings</p>
               </div>
             </div>
@@ -88,13 +87,14 @@ const PlayerInfo = ({
 
         <Settings settings={settings} />
         <div className="info__footer">
-          <Copy crosshair={crosshair}/>
-          <p className="info__config" onClick={() => setShown(!shown)}>See crosshair config</p>
-          <div className={`${shown ? 'info__show--toggle': ''} info__show`}>
+          <Copy crosshair={crosshair} />
+          <p className="info__config" onClick={() => setShown(!shown)}>
+            See crosshair config
+          </p>
+          <div className={`${shown ? "info__show--toggle" : ""} info__show`}>
             <p className="info__show--text">{crosshair}</p>
           </div>
         </div>
-        
       </div>
     </div>
   );
@@ -109,6 +109,7 @@ const mapDispatchToProps = (dispatch) => ({
   togglePlayersInfoHidden: () => dispatch(togglePlayersInfoHidden()),
   addCrosshair: (item) => dispatch(addCrosshair(item)),
   toggleSavedButton: (boolVal) => dispatch(toggleSavedButton(boolVal)),
+  addSettings: (item) => dispatch(addSettings(item)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlayerInfo);

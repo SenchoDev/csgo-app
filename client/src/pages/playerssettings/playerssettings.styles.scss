@@ -1,8 +1,11 @@
 .settings{
   display: flex;
+  flex-direction: column;
   &__block{
     padding: 5rem 11rem;
-    border-bottom: 1px solid #FD074E; 
+    border-bottom: 1px solid #FD074E;
+    display: flex;
+    flex-direction: column;
   }
   &__top{
     display: flex;
@@ -19,5 +22,8 @@
     margin-top: 0.8rem;
     color: #FFFFFF;
     font-size: 1.8rem;
+  }
+  &__show{
+    align-self: flex-start;
   }
 }

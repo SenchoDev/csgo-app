@@ -1,11 +1,12 @@
 import settingsActionTypes from "./settings.types";
 
-import { addCrosshairToFavorite } from './settings.utils'
+import { addCrosshairToFavorite } from "./settings.utils";
 
 const INITIAL_STATE = {
   copied: false,
   saved: false,
   favoriteCrosshairs: [],
+  favoriteSettings: [],
 };
 
 const settingsReducer = (state = INITIAL_STATE, action) => {
@@ -23,7 +24,18 @@ const settingsReducer = (state = INITIAL_STATE, action) => {
     case settingsActionTypes.ADD_CROSSHAIR:
       return {
         ...state,
-        favoriteCrosshairs: addCrosshairToFavorite(state.favoriteCrosshairs, action.payload)
+        favoriteCrosshairs: addCrosshairToFavorite(
+          state.favoriteCrosshairs,
+          action.payload
+        ),
+      };
+    case settingsActionTypes.ADD_SETTINGS:
+      return {
+        ...state,
+        favoriteSettings: addCrosshairToFavorite(
+          state.favoriteSettings,
+          action.payload
+        ),
       };
     default:
       return state;

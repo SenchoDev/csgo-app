@@ -12,3 +12,8 @@ export const addCrosshair = item => ({
   type: settingsActionTypes.ADD_CROSSHAIR,
   payload: item,
 });
+export const addSettings = item => ({
+  type: settingsActionTypes.ADD_SETTINGS,
+  payload: item,
+});
+
