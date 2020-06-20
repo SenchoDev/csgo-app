@@ -1,13 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-import { CopyToClipboard } from "react-copy-to-clipboard";
 
 import Settings from "../settings-overview/settings-overview.component";
 import InfoButton from "../info-buton/info-button.component";
+import Copy from '../Copy/copy.component'
+
 import { selectPlayersInfo } from "../../redux/teams/teams.selector";
 import { togglePlayersInfoHidden } from "../../redux/teams/teams.actions";
-import { toggleCopiedButton, addCrosshair } from "../../redux/settings/settings.actions";
+import { addCrosshair } from "../../redux/settings/settings.actions";
 import { selectIfCopied } from "../../redux/settings/settings.selector";
 
 import "./player-info.styles.scss";
@@ -16,13 +17,11 @@ import Target from "../../assets/target.png";
 import Computer from "../../assets/computer.png";
 import RedHeart from "../../assets/pink.png";
 import PurpleHeart from "../../assets/purple.png";
-import ClipboardImg from "../../assets/copy.png";
 import Close from "../../assets/close.png";
 
 const PlayerInfo = ({
   info: { name, img, settings, role, crosshair, team, id },
   togglePlayersInfoHidden,
-  toggleCopiedButton,
   copied,
   addCrosshair
 }) => {
@@ -60,22 +59,7 @@ const PlayerInfo = ({
 
         <Settings settings={settings} />
         <div className="info__footer">
-          <CopyToClipboard
-            text={crosshair}
-            onCopy={() =>
-              toggleCopiedButton(true) &&
-              setTimeout(() => toggleCopiedButton(false), 3000)
-            }
-          >
-            <button className="info__btn-wrap">
-              <InfoButton
-                img={ClipboardImg}
-                purple
-                fix
-                text={"Copy crosshair"}
-              />
-            </button>
-          </CopyToClipboard>
+          <Copy crosshair={crosshair}/>
           <p className="info__config">See config</p>
         </div>
       </div>
@@ -89,7 +73,6 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = (dispatch) => ({
   togglePlayersInfoHidden: () => dispatch(togglePlayersInfoHidden()),
-  toggleCopiedButton: (boolVal) => dispatch(toggleCopiedButton(boolVal)),
   addCrosshair: (item) => dispatch(addCrosshair(item)),
 });
 
