@@ -21,7 +21,7 @@ const PlayersCrosshairs = ({ savedCrosshairs, copied }) => {
           <h2 className="crosshair__heading">{name}</h2>
           <span className="crosshair__team">{team}</span>
           <Copy crosshair={crosshair}/>
-          <p className="crosshair__config">See config</p>
+          <p className="crosshair__config">See crosshair config</p>
         </div>
       ))}
     </div>

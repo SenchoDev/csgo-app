@@ -4,6 +4,7 @@ import { addCrosshairToFavorite } from './settings.utils'
 
 const INITIAL_STATE = {
   copied: false,
+  saved: false,
   favoriteCrosshairs: [],
 };
 
@@ -13,6 +14,11 @@ const settingsReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         copied: action.payload,
+      };
+    case settingsActionTypes.TOGGLE_SAVED:
+      return {
+        ...state,
+        saved: action.payload,
       };
     case settingsActionTypes.ADD_CROSSHAIR:
       return {

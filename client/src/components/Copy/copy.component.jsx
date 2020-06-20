@@ -10,19 +10,17 @@ import ClipboardImg from "../../assets/copy.png";
 import "./copy.styles.scss";
 
 const Copy = ({ toggleCopiedButton, crosshair }) => (
-  <div>
     <CopyToClipboard
       text={crosshair}
       onCopy={() =>
         toggleCopiedButton(true) &&
-        setTimeout(() => toggleCopiedButton(false), 3000)
+        setTimeout(() => toggleCopiedButton(false), 1200)
       }
     >
-      <button className="info__btn-wrap">
+      <button className="copy">
         <InfoButton img={ClipboardImg} purple fix text={"Copy crosshair"} />
       </button>
     </CopyToClipboard>
-  </div>
 )
 const mapDispatchToProps = (dispatch) => ({
   toggleCopiedButton: (boolVal) => dispatch(toggleCopiedButton(boolVal)),
