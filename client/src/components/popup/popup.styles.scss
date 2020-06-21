@@ -1,42 +1,42 @@
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.error{
+.error {
   width: 60rem;
   height: 35rem;
-  background-color: #D84242;
+  background-color: #d84242;
   display: flex;
   flex-direction: column;
   margin-left: 28%;
-  &__box-1{
+  &__box-1 {
     height: 17rem;
     width: 60rem;
-    background-color:#ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #ffffff;
+    @include flex();
     position: relative;
   }
-  &__close{
+  &__close {
     position: absolute;
     top: 0;
     right: -1rem;
     cursor: pointer;
   }
-  &__box-2{
+  &__box-2 {
     height: 17.5rem;
     width: 60rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex();
     justify-content: center;
   }
-  &__main-text{
+  &__main-text {
     font-size: 2.8rem;
   }
-  &__text{
+  &__text {
     margin-top: -0.2rem;
     font-size: 2.4rem;
-    color: #0C0E25;
+    color: #0c0e25;
     text-align: center;
-    
   }
 }

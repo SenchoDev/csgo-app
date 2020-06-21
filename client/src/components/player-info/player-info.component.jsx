@@ -11,7 +11,7 @@ import { togglePlayersInfoHidden } from "../../redux/teams/teams.actions";
 import {
   addCrosshair,
   toggleSavedButton,
-  addSettings
+  addSettings,
 } from "../../redux/settings/settings.actions";
 import {
   selectIfCopied,
@@ -25,32 +25,62 @@ import Computer from "../../assets/computer.png";
 import RedHeart from "../../assets/pink.png";
 import PurpleHeart from "../../assets/purple.png";
 import Close from "../../assets/close.png";
+import WhiteClose from "../../assets/WhiteClose.png";
 
 const PlayerInfo = ({
-  info: { name, img, settings, role, crosshair, team, id },
+  info: {
+    name,
+    img,
+    settings,
+    role,
+    crosshair,
+    team,
+    id,
+    crosshairImg,
+    imageUrl,
+  },
   togglePlayersInfoHidden,
   copied,
   addCrosshair,
   toggleSavedButton,
   saved,
-  addSettings
+  addSettings,
 }) => {
   const savingData = () => {
     toggleSavedButton(true) && setTimeout(() => toggleSavedButton(false), 1200);
   };
   const [shown, setShown] = useState(false);
+  const [shownCrosshair, setShownCrosshair] = useState(false);
+  console.log(shownCrosshair);
   return (
     <div className="info">
+      {shownCrosshair ? (
+        <div className="info__crosshair-overview">
+          <div className="info__crosshair-preview">
+            <img
+              className="info__crosshair-btn"
+              src={WhiteClose}
+              alt="close button"
+              onClick={() => setShownCrosshair(!shownCrosshair)}
+            />
+            <img
+              className="info__crosshair-img"
+              src={crosshairImg}
+              alt="crosshair Img"
+            />
+          </div>
+        </div>
+      ) : null}
       <div
         className={`${
           copied || saved ? "info__copied-succes" : ""
         } info__copied`}
       >
-        {" "}
         <p className="info__copied-text">
           {saved ? "Saved" : "Copied to clipboard"}
         </p>
       </div>
+
       <div className="info__header">
         <h3 className="info__heading">{name}</h3>
         <img
@@ -66,19 +96,31 @@ const PlayerInfo = ({
           <div className="info__overview">
             <span className="info__role">{role}</span>
             <div className="info__wrap">
-              <InfoButton img={Target} text={"Crosshair preview"} />
+              <div
+                className="info__crosshair-wrap"
+                onClick={() => setShownCrosshair(!shownCrosshair)}
+              >
+                {" "}
+                <InfoButton img={Target} text={"Crosshair preview"} />
+              </div>
               <div
                 className="info__save"
                 onClick={() =>
-                  addCrosshair({ team, name, crosshair, id }) && savingData()
+                  addCrosshair({ team, name, crosshair, id, imageUrl }) &&
+                  savingData()
                 }
               >
                 <img src={RedHeart} alt="copy" />
                 <p className="info__text">Save Crosshair settings</p>
               </div>
-              <InfoButton img={Computer} text={"Players Resolution"} />
-              <div className="info__save" onClick={() => addSettings({ team, name, id, settings }) && savingData()}>
-                <img src={PurpleHeart} alt="copys"/>
+              <InfoButton img={Computer} anchor text={"Players Resolution"} />
+              <div
+                className="info__save"
+                onClick={() =>
+                  addSettings({ team, name, id, settings }) && savingData()
+                }
+              >
+                <img src={PurpleHeart} alt="copys" />
                 <p className="info__text">Save User settings</p>
               </div>
             </div>

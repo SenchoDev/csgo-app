@@ -1,5 +1,10 @@
 $color-secondary-light: #0c0e25;
 
+@mixin clipAndColor {
+  background-clip: text;
+  color: transparent;
+}
+
 .header {
   grid-area: header-main;
   background-color: $color-secondary-light;
@@ -19,17 +24,14 @@ $color-secondary-light: #0c0e25;
 
     &:hover {
       background-image: linear-gradient(to right, #fd074e, #f67062);
-      background-clip: text;
-      color: transparent;
+      @include clipAndColor();
     }
     &-red {
       background-image: linear-gradient(to right, #fd074e, #f67062);
-      background-clip: text;
-      color: transparent;
+      @include clipAndColor();
       &:hover {
         background-image: linear-gradient(to right, #80ff72, #7ee8fa);
-        background-clip: text;
-        color: transparent;
+        @include clipAndColor();
       }
     }
     &-signin {

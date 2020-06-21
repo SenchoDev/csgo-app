@@ -1,35 +1,34 @@
-// import React from "react";
+import React from "react";
 
-// class ErrorBoundary extends React.Component {
-//   constructor() {
-//     super();
+class ErrorBoundary extends React.Component {
+  constructor() {
+    super();
 
-//     this.state = {
-//       hasErrored: false,
-//     };
-//   }
+    this.state = {
+      hasErrored: false,
+    };
+  }
 
-//   static getDerivedStateFromError(error) {
-//     //process the error
-//     return { hasErrored: true};
-//   }
+  static getDerivedStateFromError(error) {
+    return { hasErrored: true};
+  }
 
-//   componentDidCatch(error, info){
-//     console.log(error);
-//   }
+  componentDidCatch(error, info){
+    console.log(error);
+  }
 
-//   render(){
-//     if(this.state.hasErrored){
-//         return (
-//             <div >
-//               <h1>hello</h1>
-//             </div>
-//         )
-//     }
+  render(){
+    if(this.state.hasErrored){
+        return (
+            <div >
+              <h1>hello</h1>
+            </div>
+        )
+    }
 
-//     return this.props.children;
-//   }
+    return this.props.children;
+  }
 
-// }
+}
 
-// export default ErrorBoundary;
+export default ErrorBoundary;

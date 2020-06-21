@@ -1,9 +1,10 @@
 import React from "react";
-import { CopyToClipboard } from "react-copy-to-clipboard";
 import { connect } from "react-redux";
 
-import { toggleCopiedButton } from "../../redux/settings/settings.actions";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 import InfoButton from "../info-buton/info-button.component";
+
+import { toggleCopiedButton } from "../../redux/settings/settings.actions";
 
 import ClipboardImg from "../../assets/copy.png";
 

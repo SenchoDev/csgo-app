@@ -4,6 +4,8 @@
   display: flex;
   align-items: center;
   cursor:pointer;
+  padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
 
   &:hover{
     transform: translateY(-1.5px);

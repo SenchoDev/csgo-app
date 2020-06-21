@@ -1,22 +1,21 @@
-.group{
+.group {
   padding-top: 2rem;
   display: flex;
   flex-direction: column;
-  &__input{
+  &__input {
     width: 38rem;
     height: 5.2rem;
     border-radius: 5px;
-    color: #000000;;
+    color: #000000;
     font-size: 2rem;
     padding-left: 0.8rem;
     border: 0;
 
     &:focus {
       outline: none;
+    }
   }
-  
-  }
-  &__label{
+  &__label {
     font-size: 2.2rem;
     padding-bottom: 1rem;
   }

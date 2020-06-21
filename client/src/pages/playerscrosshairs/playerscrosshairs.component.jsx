@@ -15,13 +15,13 @@ const PlayersCrosshairs = ({ savedCrosshairs, copied }) => {
     <div className="crosshair">
     <div className={`${copied ? 'info__copied-succes': ''} info__copied`}> <p className="info__copied-text">Copied to clipboard</p></div>
       
-    {savedCrosshairs.map(({ crosshair, id, name, team}) => (
+    {savedCrosshairs.map(({ crosshair, id, name, team, imageUrl}) => (
         <div className="crosshair__wrap" key={id}>
           <img src={PinkHeart} alt="pink heart" />
           <h2 className="crosshair__heading">{name}</h2>
           <span className="crosshair__team">{team}</span>
           <Copy crosshair={crosshair}/>
-          <p className="crosshair__config">See crosshair config</p>
+          <div className="crosshair__img" style={{backgroundImage: `url(${imageUrl})`}}></div>
         </div>
       ))}
     </div>

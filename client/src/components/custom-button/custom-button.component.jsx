@@ -1,7 +1,8 @@
 import React from "react";
 
-import "./custom-button.styles.scss";
 import { ReactComponent as GoogleLogo } from "../../assets/google.svg";
+
+import "./custom-button.styles.scss";
 
 const CustomButton = ({ children, isGoogleSignIn, ...otherProps }) => (
   <button

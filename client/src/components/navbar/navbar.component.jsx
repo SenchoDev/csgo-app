@@ -1,11 +1,11 @@
 import React from "react";
-
-import "./navbar.styles.scss";
+import { Link } from "react-router-dom";
 
 import Logo from "../../assets/LogoMakr_0oEW5U.png";
 import PinkHeart from "../../assets/icons8-heart-outline-48.svg";
 import PurpleHeart from "../../assets/icons8-heart-outline-48-1.svg";
-import { Link } from "react-router-dom";
+
+import "./navbar.styles.scss";
 
 const Navbar = () => {
   return (

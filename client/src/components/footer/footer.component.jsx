@@ -1,10 +1,10 @@
 import React from 'react';
 
-import './footer.styles.scss';
-
 import Twitter from '../../assets/icons8-twitter-96 (1).png'
 import GitHub from '../../assets/icons8-github-60 (1).png'
 import { ReactComponent as Facebook } from "../../assets/icons8-facebook (1).svg";
+
+import './footer.styles.scss';
 
 const Footer = () => {
   return (

@@ -24,17 +24,12 @@
     margin-bottom: -1.2rem;
     padding-right: 2rem;
   }
-  &__config {
-    font-size: 1.8rem;
-    color: #fd074e;
-    text-decoration: underline;
-    margin-bottom: -2.8rem;
-    padding-left: 1.8rem;
-    cursor: pointer;
-    &:hover {
-      background-image: linear-gradient(to right, #80ff72, #7ee8fa);
-      background-clip: text;
-      color: transparent;
-    }
+  
+  &__img{
+    height: 7rem;
+    width: 9rem;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
