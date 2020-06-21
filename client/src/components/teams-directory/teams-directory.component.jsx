@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+
 import { createStructuredSelector } from "reselect";
 
 import TeamCard from "../teamcard/teamcard.component";
@@ -11,8 +12,8 @@ import "./teams-directory.styles.scss";
 const TeamsDirectory = ({ teams }) => {
   return (
     <div className="teams-menu">
-      {teams.map(({ id , ...otherItemsProps }) => (
-        <TeamCard key={id} {...otherItemsProps} />
+      {teams.map((section) => (
+        <TeamCard key={section.id} section={section} />
       ))}
     </div>
   );

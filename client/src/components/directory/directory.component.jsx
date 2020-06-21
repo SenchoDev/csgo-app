@@ -12,8 +12,8 @@ import './directory.styles.scss';
 const Directory = ({ sections }) => {
   return (
     <div className="directory-menu">
-     {sections.map(({ id , ...otherItemsProps }) => (
-       <TeamCard key={id} {...otherItemsProps }/>
+     {sections.map((section) => (
+       <TeamCard key={section.id} section={section}/>
      ))} 
     </div>
   )
