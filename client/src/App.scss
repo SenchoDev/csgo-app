@@ -30,7 +30,6 @@ $bp-small: 37.5em; // 600px;
 -tab-land
 big-desktop
 
-
 order : Base + typography > general layout + grid > page layout > components
 
 */
@@ -44,18 +43,15 @@ order : Base + typography > general layout + grid > page layout > components
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  @media only screen and (max-width: 103.12em ){ // 1650px
+    font-size: 57.5%;
+  }
+
+  @media only screen and (max-width: 81.25em ){ // 1300px
+    font-size: 52.5%;
+  }
 }
 
-@mixin respond($breakpoint){
-  @if $breakpoint == last{
-    @media  only screen and (max-width: 25em){@content}; //600p
-  }
-    
-    
-    @if $breakpoint == big-desktop{
-    @media only screen and(min-width: 140.625em){@content}; //1200px
-  }
-}
 
 body {
   font-family: $font-primary ;
@@ -72,6 +68,9 @@ body {
   grid-template-areas: "navbar header-main"
                        "navbar main"
                         ". footer";
+  @media only screen and (max-width: 103.12em ){
+    grid-template-columns: 40rem 1fr;
+  }
                        
 }
 .main-wrapper{
