@@ -114,22 +114,6 @@ const INITIAL_STATE = {
             "cl_crosshair_drawoutline 1;cl_crosshaircolor 1;cl_crosshairdot 0;cl_crosshairgap -2;cl_crosshairsize 2;cl_crosshairstyle 4;cl_crosshairthickness 0",
         },
         {
-          id: 7,
-          name: "flusha",
-          img: "https://i.ibb.co/9vxWc7q/flusha.png",
-          role: "rifler",
-          crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
-          settings: {
-            monitor: "Benq XL2546",
-            mouse: "Logitech G903",
-            keyboard: "Logitech G810",
-            headset: "Logitech G433",
-            mousepad: "Logitech G640",
-          },
-          crosshair:
-            "cl_crosshair_drawoutline 0;cl_crosshaircolor 5;cl_crosshairdot 0;cl_crosshairgap -3;cl_crosshairsize 3;cl_crosshairstyle 4;cl_crosshairthickness 1",
-        },
-        {
           id: 8,
           name: "Golden",
           img: "https://i.ibb.co/8KWNrvn/golden.jpg",
@@ -178,7 +162,24 @@ const INITIAL_STATE = {
           crosshair:
             "cl_crosshair_drawoutline 0;cl_crosshaircolor 1;cl_crosshairdot 0;cl_crosshairgap -3;cl_crosshairsize 3;cl_crosshairstyle 4;cl_crosshairthickness 1",
         },
+        {
+          id: 7,
+          name: "flusha",
+          img: "https://i.ibb.co/9vxWc7q/flusha.png",
+          role: "rifler",
+          crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
+          settings: {
+            monitor: "Benq XL2546",
+            mouse: "Logitech G903",
+            keyboard: "Logitech G810",
+            headset: "Logitech G433",
+            mousepad: "Logitech G640",
+          },
+          crosshair:
+            "cl_crosshair_drawoutline 0;cl_crosshaircolor 5;cl_crosshairdot 0;cl_crosshairgap -3;cl_crosshairsize 3;cl_crosshairstyle 4;cl_crosshairthickness 1",
+        },
       ],
+      
     },
     {
       team: "G2",
@@ -284,7 +285,7 @@ const INITIAL_STATE = {
         {
           id: 16,
           name: "Boombl4",
-          img: "https://i.ibb.co/YdXj7bH/Dupreeh-CS-GO.jpg",
+          img: "https://i.ibb.co/Ltjbszf/boombl4.png",
           role: "rifler",
           crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
           settings: {
@@ -300,7 +301,7 @@ const INITIAL_STATE = {
         {
           id: 17,
           name: "electronic",
-          img: "https://i.ibb.co/nnDrbC6/dev1ice.jpg",
+          img: "https://i.ibb.co/s2N4Jcd/electronic.png",
           role: "rifler",
           crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
           settings: {
@@ -316,7 +317,7 @@ const INITIAL_STATE = {
         {
           id: 18,
           name: "flamie",
-          img: "https://i.ibb.co/w72F4Mv/gla1ive.jpg",
+          img: "https://i.ibb.co/X56ydwp/flamie.png",
           role: "rifler",
           crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
           settings: {
@@ -332,7 +333,7 @@ const INITIAL_STATE = {
         {
           id: 19,
           name: "Perfecto",
-          img: "https://i.ibb.co/NCxnkx8/magisk.jpg",
+          img: "https://i.ibb.co/nmH6yhJ/perfecto.jpg",
           role: "rifler",
           crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
           settings: {
@@ -348,7 +349,7 @@ const INITIAL_STATE = {
         {
           id: 20,
           name: "s1mple",
-          img: "https://i.ibb.co/gyTYmbT/xyp9x.jpg",
+          img: "https://i.ibb.co/ZgJ836L/s1mplee.jpg",
           role: "awp",
           crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
           settings: {
@@ -369,6 +370,88 @@ const INITIAL_STATE = {
       color: "#0A2B47",
       players: ["EliGe", "NAF", "nitr0", "Stewie2k", "Twistzz"],
       id: 5,
+      teamsData: [
+    
+        {
+          id: 21,
+          name: "EliGe",
+          img: "https://i.ibb.co/b3mccVT/elige.jpg",
+          role: "rifler",
+          crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
+          settings: {
+            monitor: "Benq XL2540",
+            mouse: "Logitech G703",
+            keyboard: "Ducky One",
+            headset: "HyperX Cloud II",
+            mousepad: "Steelseries QCK Heavy",
+          },
+          crosshair:"cl_crosshaircolor 1;cl_crosshairstyle 1; cl_fixedcrosshairgap -4.5; hud_showtargetid 0",
+        },
+        {
+          id: 22,
+          name: "NAF",
+          img: "https://i.ibb.co/gg23Nqn/naf.png",
+          role: "rifler",
+          crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
+          settings: {
+            monitor: "BenQ XL2411z",
+            mouse: "Zowie EC1-A",
+            keyboard: "Sennheiser Game Zero",
+            headset: "HyperX Alloy FPS",
+            mousepad: "	Zowie G-SR",
+          },
+          crosshair:
+          "cl_crosshair_drawoutline 0;cl_crosshaircolor 1;cl_crosshairdot 0;cl_crosshairgap 2;cl_crosshairsize 2;cl_crosshairstyle 4;cl_crosshairthickness 1;",
+        },
+        {
+          id: 23,
+          name: "nitr0",
+          img: "https://i.ibb.co/y47FxNY/nitr0.png",
+          role: "rifler",
+          crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
+          settings: {
+            monitor: "Asus VG248QE",
+            mouse: "Zowie EC2-B",
+            keyboard: "HyperX Alloy FPS",
+            headset: "HyperX Cloud II",
+            mousepad: "Razer Gigantus",
+          },
+          crosshair:
+            "cl_crosshairstyle 5;cl_crosshairsize 3.5;cl_crosshair_drawoutline 1;cl_crosshairthickness 1;cl_crosshair_outlinethickness 0.4;cl_crosshairdot 0;cl_crosshairgap -1",
+        },
+        {
+          id: 24,
+          name: "Stewie2k",
+          img: "https://i.ibb.co/tq8kDdw/stewie.jpg",
+          role: "awp",
+          crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
+          settings: {
+            monitor: "BenQ XL2540",
+            mouse: "SteelSeries Rival 310",
+            keyboard: "Razer BlackWidow X Chroma",
+            headset: "HyperX Cloud II",
+            mousepad: "	Steelseries QCK Heavy",
+          },
+
+          crosshair:"cl_crosshair_drawoutline 0;cl_crosshaircolor 1;cl_crosshairdot 0;cl_crosshairgap -1.5;cl_crosshairsize 4.5;cl_crosshairstyle 4;cl_crosshairthickness 1",
+        },
+        {
+          id: 25,
+          name: "Twistzz",
+          img: "https://i.ibb.co/1Qv3T2k/twistz.jpg",
+          role: "rifler",
+          crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
+          settings: {
+            monitor: "Asus VG248QE	",
+            mouse: "Razer DeathAdder Elite",
+            keyboard: "Razer BlackWidow X Chroma",
+            headset: "HyperX Cloud II",
+            mousepad: "Zowie G-SR",
+          },
+          crosshair:
+            "cl_crosshair_drawoutline 0;cl_crosshaircolor 1;cl_crosshairdot 0;cl_crosshairgap -5;cl_crosshairsize 4;cl_crosshairstyle 4;cl_crosshairthickness 0",
+        },
+      ]    
     },
     {
       team: "FaZe",
@@ -377,7 +460,6 @@ const INITIAL_STATE = {
       players: ["Bymas", "broky", "NiKo", "rain", "coldzera"],
       id: 6,
       teamsData: [
-    
         {
           id: 26,
           name: "Bymas",
@@ -465,6 +547,87 @@ const INITIAL_STATE = {
       color: "#B11739",
       players: ["ChrisJ", "Karrigan", "ropz", "frozen", "woxic"],
       id: 7,
+      teamsData: [
+        {
+          id: 31,
+          name: "ChrisJ",
+          img: "https://i.ibb.co/r4hFjPj/crhisJ.png",
+          role: "rifler",
+          crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
+          settings: {
+            monitor: "Benq XL2546",
+            mouse: "Dream Machines DM2 Comfy",
+            keyboard: "ChrisJ",
+            headset: "Razer Kraken Pro V2",
+            mousepad: "Razer Gigantus Team Razer Edition-",
+          },
+          crosshair:"cl_crosshair_drawoutline 1; cl_crosshair_outlinethickness 1; cl_crosshairalpha 255; cl_crosshaircolor 4; cl_crosshaircolor_b 0; cl_crosshaircolor_g 0; cl_crosshaircolor_r 0; cl_crosshairdot 0; cl_crosshairgap 1; cl_crosshairscale 2000; cl_crosshairsize 3; cl_crosshairstyle 4; cl_crosshairthickness 1; cl_crosshairusealpha 1;",
+        },
+        {
+          id: 32,
+          name: "Karrigan",
+          img: "https://i.ibb.co/71mCyj8/karrigan.jpg",
+          role: "rifler",
+          crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
+          settings: {
+            monitor: "BenQ XL2540",
+            mouse: "Razer DeathAdder Elite",
+            keyboard: "Razer BlackWidow Chroma TE V2	",
+            headset: "Razer Kraken Pro V2",
+            mousepad: "Razer Gigantus Team Razer Edition",
+          },
+          crosshair:
+          "cl_crosshairalpha 255; cl_crosshaircolor 1; cl_crosshairdot 0; cl_crosshairgap -2; cl_crosshairsize 3; cl_crosshairstyle 4; cl_crosshairusealpha 1; cl_crosshairthickness 1; cl_crosshair_drawoutline 0;",
+        },
+        {
+          id: 33,
+          name: "ropz",
+          img: "https://i.ibb.co/TTR2x8t/ropz.png",
+          role: "rifler",
+          crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
+          settings: {
+            monitor: "BenQ XL2540",
+            mouse: "Zowie EC2-A",
+            keyboard: "Zowie Celeritas 2",
+            headset: "Sennheiser Game Zero",
+            mousepad: "Zowie G-SR",
+          },
+          crosshair:
+            "cl_crosshair_drawoutline 0;cl_crosshair_outlinethickness 1;cl_crosshaircolor 1;cl_crosshairdot 0;cl_crosshairgap -3;cl_crosshairsize 2;cl_crosshairstyle 4;cl_crosshairthickness 1",
+        },
+        {
+          id: 34,
+          name: "frozen",
+          img: "https://i.ibb.co/RCHsmwy/frozen.jpg",
+          role: "rifler",
+          crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
+          settings: {
+            monitor: "BenQ XL2546",
+            mouse: "Zowie EC2-A",
+            keyboard: "HyperX Alloy FPS	",
+            headset: "Razer Kraken Pro V2",
+            mousepad: "Logitech G640 ESL Edition",
+          },
+
+          crosshair:"cl_crosshairalpha 255; cl_crosshaircolor 1; cl_crosshairdot 0; cl_crosshairgap -2; cl_crosshairsize 4; cl_crosshairstyle 4; cl_crosshairusealpha 1; cl_crosshairthickness 0; cl_crosshair_drawoutline 0;",
+        },
+        {
+          id: 35,
+          name: "woxic",
+          img: "https://i.ibb.co/r5vypCj/woxic1.jpg",
+          role: "awp",
+          crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
+          settings: {
+            monitor: "BenQ XL2546",
+            mouse: "Steelseries Sensei Ten",
+            keyboard: "Razer Blackwindow Crhoma TE V2",
+            headset: "Razer Kraken TE",
+            mousepad: "Razer Gigantus",
+          },
+          crosshair:
+            "cl_crosshairalpha 200; cl_crosshaircolor 5; cl_crosshaircolor_b 129; cl_crosshaircolor_r 250; cl_crosshaircolor_g 50; cl_crosshairdot 0; cl_crosshairgap -1; cl_crosshairsize 3; cl_crosshairstyle 4; cl_crosshairusealpha 1; cl_crosshairthickness 1; cl_crosshair_sniper_width 1; cl_crosshair_drawoutline 0;",
+        },
+      ]
     },
     {
       team: "Furia",
@@ -472,6 +635,87 @@ const INITIAL_STATE = {
       color: "#000000",
       players: ["HEN1", "arT", "yuurih", "VINI", "KSCERATO"],
       id: 8,
+      teamsData: [
+        {
+          id: 36,
+          name: "HEN1",
+          img: "https://i.ibb.co/CWBCyGM/hen1.jpg",
+          role: "awp",
+          crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
+          settings: {
+            monitor: "BenQ Xl2546",
+            mouse: "Zowie Ec2 Tyloo",
+            keyboard: "HyperX Alloy FPS",
+            headset: "HyperX Cloud Alpha",
+            mousepad: "Steelseries QCK Heavy",
+          },
+          crosshair:"cl_crosshairalpha 255; cl_crosshaircolor 4; cl_crosshairdot 0; cl_crosshairgap -3; cl_crosshairsize 2; cl_crosshairstyle 4; cl_crosshairusealpha 1; cl_crosshairthickness 0; cl_crosshair_drawoutline 0; cl_crosshair_sniper_width 1.1;",
+        },
+        {
+          id: 37,
+          name: "arT",
+          img: "https://i.ibb.co/vX77Mgw/arT.jpg",
+          role: "rifler",
+          crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
+          settings: {
+            monitor: "BenQ XL2540",
+            mouse: "Logitech G Pro",
+            keyboard: "HyperX Alloy FPS",
+            headset: "HyperX Cloud Revolver",
+            mousepad: "HyperX Fury S",
+          },
+          crosshair:
+          "cl_crosshairalpha 255; cl_crosshaircolor 1; cl_crosshairdot 0; cl_crosshairgap -3; cl_crosshairsize 2; cl_crosshairstyle 4; cl_crosshairusealpha 1; cl_crosshairthickness 0; cl_crosshair_drawoutline 0;          ",
+        },
+        {
+          id: 38,
+          name: "yuurih",
+          img: "https://i.ibb.co/zRjFDf1/yuurih.jpg",
+          role: "rifler",
+          crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
+          settings: {
+            monitor: "BenQ XL2546",
+            mouse: "Zowie EC1",
+            keyboard: "HyperX Alloy",
+            headset: "HyperX Cloud II",
+            mousepad: "Zowie G-SR",
+          },
+          crosshair:
+            "cl_crosshairalpha 200; cl_crosshaircolor 2; cl_crosshairdot 0; cl_crosshairgap -3; cl_crosshairsize 2; cl_crosshairstyle 4; cl_crosshairusealpha 1; cl_crosshairthickness 1; cl_crosshair_drawoutline 0;",
+        },
+        {
+          id: 39,
+          name: "VINI",
+          img: "https://i.ibb.co/BCj84Bh/vini.jpg",
+          role: "awp",
+          crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
+          settings: {
+            monitor: "BenQ XL2546",
+            mouse: "Razer Viper",
+            keyboard: "HyperX Alloy Elite",
+            headset: "HyperX Cloud Alpha S",
+            mousepad: "Gigabyte Aorus AMP500",
+          },
+
+          crosshair:"cl_crosshairalpha 200; cl_crosshaircolor 4; cl_crosshairdot 0; cl_crosshairgap -2; cl_crosshairsize 3; cl_crosshairstyle 4; cl_crosshairusealpha 1; cl_crosshairthickness 1; cl_crosshair_drawoutline 1;",
+        },
+        {
+          id: 40,
+          name: "KSCERATO",
+          img: "https://i.ibb.co/D8NF6yS/kscerato.jpg",
+          role: "rifler",
+          crosshairImg: "https://i.ibb.co/tKc5tLH/dev1ce.jpg",
+          settings: {
+            monitor: "BenQ XL2546",
+            mouse: "Glorious Model D",
+            keyboard: "HyperX Alloy FPS",
+            headset: "HyperX Cloud Alpha",
+            mousepad: "HyperX Fury S",
+          },
+          crosshair:
+            "cl_crosshair_drawoutline 0; cl_crosshair_sniper_width 1; cl_crosshairalpha 250; cl_crosshaircolor 4; cl_crosshaircolor_b 165; cl_crosshaircolor_g 255; cl_crosshaircolor_r 0; cl_crosshairdot 1; cl_crosshairgap -3; cl_crosshairgap_useweaponvalue 0; cl_crosshairsize 1; cl_crosshairstyle 4; cl_crosshairthickness 0; cl_crosshairusealpha 1;",
+        },
+      ]
     },
   ],
 };
