@@ -16,12 +16,41 @@
   height: 83rem;
   background-color: #ffffff;
   position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @media only screen and (max-width: 68.75em) {
+    // 1100px
+    width: 115rem;
+    height: 70rem;
+  }
+
+  @media only screen and (max-width: 57.5em) {
+    width: 100rem;
+    height: 80rem;
+  }
+
+  @media only screen and (max-width: 50em) {
+    // 800px
+    width: 62rem;
+    height: auto;
+    overflow-y: scroll;
+    max-height: 100%;
+  }
+
+  @media only screen and (max-width: 28.12em) {
+    width: 50rem;
+  }
+
   
   &__header{
     display: flex;
     padding: 2.2rem 3.2rem;
     align-items: center;
     border-bottom: 1px solid #0A2B47;
+    @media only screen and (max-width: 68.75em) {
+      // 1100px
+      padding: 1rem 3.2rem;
+    }
   }
   &__heading{
     color: #0A2B47;
@@ -39,11 +68,20 @@
     padding: 6rem 11rem;
     display: grid;
     align-self: start;
+    @media only screen and (max-width: 68.75em) {
+      // 1100px
+      padding: 3rem 5.5rem;
+    }
   }
   &__section{
     display: flex;
     margin-bottom: 4rem;
-  
+    @media only screen and (max-width: 50em) {
+      // 800px
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
   &__player{
     width: 35rem;
@@ -73,6 +111,17 @@
     grid-template-columns: 27rem 27rem;
     grid-row-gap: 1.7rem;
     grid-column-gap: 2rem;
+
+    @media only screen and (max-width: 28.12em) {
+      grid-row-gap: 1rem;
+      grid-column-gap: 0.6rem;
+      grid-template-rows: repeat(4, 4.5rem);
+      grid-template-columns: 27rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    
   }
   &__crosshair-overview{
     position: absolute;
@@ -81,7 +130,21 @@
     background-color: rgba(#000000, 0.8);
     overflow: hidden;
     z-index: 2;
-    
+    @media only screen and (max-width: 68.75em) {
+      // 1100p
+      width:120rem;
+      background-color: transparent;
+    }
+
+    @media only screen and (max-width: 50em) {
+      // 800px
+      width: 65rem;
+    }
+
+    @media only screen and (max-width: 25em) {
+      // 800px
+      width: 50rem;
+    }
   }
 
   &__crosshair-preview{
@@ -97,6 +160,16 @@
   &__crosshair-img{
     align-self: center;
     margin-top: 1rem;
+    @media only screen and (max-width: 81.25em) {
+      // 1300px
+      width: 32rem;
+      height: 25rem;
+    }
+    @media only screen and (max-width: 68.75em) {
+      // 1100px
+      width: 30rem;
+      height: 20rem
+    }
   }
   &__crosshair-btn{
     width: 2rem;
@@ -110,6 +183,9 @@
     display: flex;
     align-items: center;
     cursor:pointer;
+    @media only screen and (max-width: 28.12em) {
+     justify-content: center;
+    }
   }
 
   &__text{
@@ -124,15 +200,31 @@
     padding-top:4rem;
     display: flex;
     align-items: flex-start;
+    @media only screen and (max-width: 50em) {
+      // 800px
+      flex-direction: column;
+    }
   }
   &__show{
     margin-left: 2rem;
+    margin-top: -2rem;
     border-radius: 0.5rem;
     width: 35rem;
-    height: 17rem;
+    height: 21em;
     background-color: #FD074E;
     display: none;
     box-shadow: 0 1.5rem 4rem rgba(#000000, 0.15);
+    @media only screen and (max-width: 68.75em) {
+      // 1100px
+      width: 50rem;
+      height: 16rem;
+      margin-left: 1rem;
+    }
+
+    @media only screen and (max-width: 28.12em) {
+      width: 40rem;
+      height: 20rem;
+    }
 
     &--text{
       padding: 1rem 2rem;
@@ -149,6 +241,9 @@
     font-size: 1.8rem;
     text-decoration: underline;
     cursor: pointer;
+    @media only screen and (max-width: 50em) {
+      padding-bottom: 5rem;
+    }
   }
   &__copied{
     color: black;
@@ -164,6 +259,11 @@
     align-items: center;
     justify-content: center;
     border-radius: 2.5rem;
+    @media only screen and (max-width: 68.75em) {
+      width: 20rem;
+      height: 5rem;
+      font-size: 1.8rem;
+    }
     &-text{
       color: #ffffff;
     }

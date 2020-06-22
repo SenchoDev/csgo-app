@@ -1,6 +1,6 @@
 .sign-in-and-sign-up{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 6rem auto;
   @media only screen and (max-width: 81.25em ){ // 1300px
     justify-content: space-evenly

@@ -62,4 +62,7 @@
   @media only screen and (max-width: 62.5em ){ // 1000px
     justify-content: start;
   }
+  @media only screen and (max-width: 25em) {
+    width: 25rem;
+  }
 }

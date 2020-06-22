@@ -22,6 +22,12 @@
   &__steps {
     display: flex;
     padding-top: 3.2rem;
+    @media only screen and (max-width: 25em) {
+      // 400px
+      flex-wrap: wrap;
+      padding-bottom: 2rem;
+      justify-content: center;
+    }
   }
 
   &__box {
@@ -40,6 +46,10 @@
     &--text {
       font-size: 1.6rem;
       font-weight: 400;
+    }
+    @media only screen and (max-width: 25em) {
+      // 400px
+      margin-bottom: 2rem;;
     }
   }
   &__num {

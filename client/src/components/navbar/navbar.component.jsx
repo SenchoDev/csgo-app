@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/LogoMakr_0oEW5U.png";
 import PinkHeart from "../../assets/icons8-heart-outline-48.svg";
 import PurpleHeart from "../../assets/icons8-heart-outline-48-1.svg";
+import Logo2 from '../../assets/logo black.png'
 
 import "./navbar.styles.scss";
 
@@ -11,7 +12,10 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <Link className="navbar__img-box" to="/">
-        <img src={Logo} alt="Logo" className="navbar__img" />
+        <picture className="navbar__img-wrap">
+          <source srcset={Logo2} media="(max-width: 57.5em)"/>
+          <img srcset={Logo} alt="Logo"  className="navbar__img"/>
+        </picture>
       </Link>
       <ul className="navbar__list">
         <li>

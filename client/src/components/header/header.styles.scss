@@ -1,4 +1,5 @@
 $color-secondary-light: #0c0e25;
+$color-primary: #fd074e;
 
 @mixin clipAndColor {
   background-clip: text;
@@ -15,6 +16,11 @@ $color-secondary-light: #0c0e25;
   align-items: center;
   @media only screen and (max-width: 81.25em ){ // 1300px
     padding-right: 3rem;
+  }
+  @media only screen and (max-width: 57.5em) {
+    padding-right: 0;
+    justify-content: center;
+    padding: 2rem;
   }
 
 
@@ -67,6 +73,12 @@ $color-secondary-light: #0c0e25;
       fill: #ffffff;
       height: 2.5rem;
       width: 2.5rem;
+      @media only screen and (max-width: 81.5em) {
+        margin-left: 0;
+      }
+      @media only screen and (max-width: 31.25em) {
+        margin-left: -3rem;
+      }
     }
   }
 }
