@@ -9,9 +9,9 @@ import './teamslist.styles.scss'
 
 const TeamsList = ({ fetchTeamsStart }) => {
 
-  // useEffect(() => {
-  //   fetchTeamsStart();
-  // }, [fetchTeamsStart]);
+  useEffect(() => {
+    fetchTeamsStart();
+  }, [fetchTeamsStart]);
 
   return (
     <div className="teams-page">

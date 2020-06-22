@@ -22,6 +22,7 @@ import "./App.scss";
 const App = ({ checkUserSession, currentUser, info }) => {
   useEffect(() => {
     checkUserSession();
+
   }, [checkUserSession]);
 
   return (
