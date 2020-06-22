@@ -15,6 +15,11 @@ $color-white: #ffffff;
     margin-left: -4rem;
     border-bottom: 1px solid $color-primary;
   }
+  &__img{
+    @media only screen and (max-width: 81.25em ){ // 1300px
+      width:35rem;
+    }
+  }
 
   &__list {
     display: flex;

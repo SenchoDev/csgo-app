@@ -10,6 +10,11 @@
     font-size: 2rem;
     padding-left: 0.8rem;
     border: 0;
+    @media only screen and (max-width: 81.25em ){ // 1300px
+      font-size: 1.5rem;
+      height: 4.2rem;
+      width: 36rem;
+    }
 
     &:focus {
       outline: none;
@@ -18,5 +23,9 @@
   &__label {
     font-size: 2.2rem;
     padding-bottom: 1rem;
+    @media only screen and (max-width: 81.25em ){ // 1300px
+      font-size: 1.9rem;
+      padding-bottom: 0.5rem;
+    }
   }
 }

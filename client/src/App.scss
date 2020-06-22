@@ -71,6 +71,9 @@ body {
   @media only screen and (max-width: 103.12em ){
     grid-template-columns: 40rem 1fr;
   }
+  @media only screen and (max-width: 81.25em ){ // 1300px
+    grid-template-columns: 35rem 1fr;
+  }
                        
 }
 .main-wrapper{
