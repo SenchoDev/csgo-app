@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
-import TeamsDirectory from '../../components/teams-directory/teams-directory.component'
+import TeamsDirectoryContainer from '../../components/teams-directory/teams-directory.container'
 
 import { fetchTeamsStart } from '../../redux/teams/teams.actions'
 
@@ -16,7 +16,7 @@ const TeamsList = ({ fetchTeamsStart }) => {
   return (
     <div className="teams-page">
       <h3 className="teams-page__heading">Top 30 Teams</h3>
-      <TeamsDirectory/>
+      <TeamsDirectoryContainer />
     </div>
   )
 }

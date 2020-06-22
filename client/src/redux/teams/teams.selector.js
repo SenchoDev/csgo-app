@@ -16,3 +16,8 @@ export const selectTeamsForPreview = createSelector(
   [selectTeams],
   (teams) => teams ? Object.keys(teams).map((key) => teams[key]) :  []
 );
+
+export const selectAreTeamsFetching = createSelector(
+  [selectTeams],
+  (teams) => teams.isFetching
+)
