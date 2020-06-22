@@ -14,8 +14,8 @@ import * as serviceWoker from "./serviceWorker";
 ReactDOM.render(
   <BrowserRouter>
     <Provider store={store}>
-    <PersistGate persistor={persistor}>
-      <App />
+      <PersistGate persistor={persistor}>
+        <App />
       </PersistGate>
     </Provider>
   </BrowserRouter>,

@@ -1,17 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense, lazy } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-
-import Navbar from "./components/navbar/navbar.component";
-import Header from "./components/header/header.component";
-import HomePage from "./pages/homepage/homepage.component";
-import TeamsList from "./pages/teamslist/teamslist.component";
-import PlayersSettings from "./pages/playerssettings/playerssettings.component";
-import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
-import PlayersCrosshairs from "./pages/playerscrosshairs/playerscrosshairs.component";
-import Footer from "./components/footer/footer.component";
-import PlayerInfo from "./components/player-info/player-info.component";
 
 import { selectCurrentUser } from "./redux/user/user.selectors";
 import { checkUserSession } from "./redux/user/user.actions";
@@ -19,36 +9,55 @@ import { selectPlayersInfo } from "./redux/teams/teams.selector";
 
 import "./App.scss";
 
+import Spinner from "./components/spinner/spinner.component";
+import ErrorBoundary from "./components/error-boundary/error-boundary.component";
+
+import Navbar from "./components/navbar/navbar.component";
+import Header from "./components/header/header.component";
+import Footer from "./components/footer/footer.component";
+import PlayerInfo from "./components/player-info/player-info.component";
+
+const SignInAndSignUpPage = lazy(() => import("./pages/sign-in-and-sign-up/sign-in-and-sign-up.component"));
+const PlayersCrosshairs = lazy(() => import("./pages/playerscrosshairs/playerscrosshairs.component"));
+const PlayersSettings = lazy(() => import("./pages/playerssettings/playerssettings.component"));
+const TeamsList = lazy(() => import("./pages/teamslist/teamslist.component"));
+const HomePage = lazy(() => import("./pages/homepage/homepage.component"));
+
 const App = ({ checkUserSession, currentUser, info }) => {
   useEffect(() => {
     checkUserSession();
-
   }, [checkUserSession]);
 
   return (
     <div>
-      {info ? <PlayerInfo/> : ''}
+      {info ? <PlayerInfo /> : ""}
       <div className={`${info ? "blur" : ""} container`}>
         <Navbar />
         <Header />
 
-        <main className='main-wrapper'>
+        <main className="main-wrapper">
           <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/players" component={TeamsList} />
-            <Route exact path="/players_settings" component={PlayersSettings} />
-            <Route
-              exact
-              path="/players_crosshairs"
-              component={PlayersCrosshairs}
-            />
-            <Route
-              exact
-              path="/signin"
-              render={() =>
-                currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />
-              }
-            />
+            <Suspense fallback={<Spinner />}>
+              <Route exact path="/" component={HomePage} />
+              <Route exact path="/players" component={TeamsList} />
+              <Route
+                exact
+                path="/players_settings"
+                component={PlayersSettings}
+              />
+              <Route
+                exact
+                path="/players_crosshairs"
+                component={PlayersCrosshairs}
+              />
+              <Route
+                exact
+                path="/signin"
+                render={() =>
+                  currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />
+                }
+              />
+            </Suspense>
           </Switch>
         </main>
         <Footer />
