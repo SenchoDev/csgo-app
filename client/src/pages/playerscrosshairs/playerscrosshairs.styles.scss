@@ -42,4 +42,17 @@
       margin-left: 2rem;
     }
   }
+  &__delete {
+    font-size: 2rem;
+    color: red;
+    text-decoration: underline;
+    margin-bottom: -2.8rem;
+    padding-left: 1.8rem;
+    cursor: pointer;
+    &:hover {
+      background-image: linear-gradient(to right, #80ff72, #7ee8fa);
+      background-clip: text;
+      color: transparent;
+    }
+  }
 }

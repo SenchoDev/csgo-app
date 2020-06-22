@@ -13,8 +13,8 @@ const Navbar = () => {
     <div className="navbar">
       <Link className="navbar__img-box" to="/">
         <picture className="navbar__img-wrap">
-          <source srcset={Logo2} media="(max-width: 57.5em)"/>
-          <img srcset={Logo} alt="Logo"  className="navbar__img"/>
+          <source srcSet={Logo2} media="(max-width: 57.5em)"/>
+          <img srcSet={Logo} alt="Logo"  className="navbar__img"/>
         </picture>
       </Link>
       <ul className="navbar__list">

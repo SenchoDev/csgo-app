@@ -1,6 +1,6 @@
 import settingsActionTypes from "./settings.types";
 
-import { addItemToFavorite, removeItemFromFavorite} from "./settings.utils";
+import { addItemToFavorite, removeItemFromFavorite } from "./settings.utils";
 
 const INITIAL_STATE = {
   copied: false,
@@ -29,6 +29,14 @@ const settingsReducer = (state = INITIAL_STATE, action) => {
           action.payload
         ),
       };
+    case settingsActionTypes.REMOVE_CROSSHAIR:
+      return {
+        ...state,
+        favoriteCrosshairs: removeItemFromFavorite(
+          state.favoriteCrosshairs,
+          action.payload
+        ),
+      };
     case settingsActionTypes.ADD_SETTINGS:
       return {
         ...state,
@@ -38,10 +46,13 @@ const settingsReducer = (state = INITIAL_STATE, action) => {
         ),
       };
     case settingsActionTypes.REMOVE_SETTINGS:
-      return{
-        favoriteSettings: removeItemFromFavorite(state.favoriteSettings, action.payload),
-        ...state
-      }
+      return {
+        ...state,
+        favoriteSettings: removeItemFromFavorite(
+          state.favoriteSettings,
+          action.payload
+        ),
+      };
     default:
       return state;
   }

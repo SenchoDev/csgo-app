@@ -17,3 +17,13 @@ export const addSettings = item => ({
   payload: item,
 });
 
+export const removeSettings = item => ({
+  type: settingsActionTypes.REMOVE_SETTINGS,
+  payload: item,
+});
+export const removeCrosshair = item => ({
+  type: settingsActionTypes.REMOVE_CROSSHAIR,
+  payload: item,
+});
+
+

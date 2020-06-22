@@ -38,4 +38,17 @@
   &__show{
     align-self: flex-start;
   }
+  &__delete {
+    font-size: 2rem;
+    color: red;
+    text-decoration: underline;
+    padding-left: 1.8rem;
+    margin-bottom: -0.5rem;
+    cursor: pointer;
+    &:hover {
+      background-image: linear-gradient(to right, #80ff72, #7ee8fa);
+      background-clip: text;
+      color: transparent;
+    }
+  }
 }
