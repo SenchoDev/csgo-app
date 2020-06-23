@@ -51,7 +51,6 @@ const PlayerInfo = ({
   };
   const [shown, setShown] = useState(false);
   const [shownCrosshair, setShownCrosshair] = useState(false);
-  console.log(shownCrosshair);
   return (
     <div className="info">
       {shownCrosshair ? (

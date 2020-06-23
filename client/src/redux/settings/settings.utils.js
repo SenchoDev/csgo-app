@@ -8,7 +8,5 @@ export const removeItemFromFavorite = (favoriteItems, itemToRemove) => {
   const existingItem = favoriteItems.find(
     item => item.id === itemToRemove.id
   )
-  console.log(existingItem);
-  console.log(favoriteItems)
   if(existingItem) return favoriteItems.filter(item => item.id !== itemToRemove.id)
 }

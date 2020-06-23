@@ -16,6 +16,7 @@
   height: 83rem;
   background-color: #ffffff;
   position: fixed;
+
   overflow-y: auto;
   overflow-x: hidden;
   @media only screen and (max-width: 68.75em) {
@@ -263,6 +264,7 @@
       width: 20rem;
       height: 5rem;
       font-size: 1.8rem;
+      bottom: 0;
     }
     &-text{
       color: #ffffff;
