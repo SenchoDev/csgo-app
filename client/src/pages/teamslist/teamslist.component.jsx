@@ -15,7 +15,7 @@ const TeamsList = ({ fetchTeamsStart }) => {
 
   return (
     <div className="teams-page">
-      <h3 className="teams-page__heading">Top 30 Teams</h3>
+      <h3 className="teams-page__heading">Top 30 Teams (only top 8 teams provided with data)</h3>
       <TeamsDirectoryContainer />
     </div>
   )

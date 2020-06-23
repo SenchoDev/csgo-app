@@ -1,9 +1,8 @@
 import TeamsActionTypes from "./teams.types";
 
-import TEAMS_DATA from './teams.data'
 
 const INITIAL_STATE = {
-  teams: TEAMS_DATA,
+  teams: {},
   isFetching: false,
   errorMessage: undefined,
   playersInfo: false,

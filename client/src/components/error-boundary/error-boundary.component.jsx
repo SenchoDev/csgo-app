@@ -1,5 +1,9 @@
 import React from "react";
 
+import GhostImg from '../../assets/ghost.png'
+
+import './error-boundary.styles.scss'
+
 class ErrorBoundary extends React.Component {
   constructor() {
     super();
@@ -20,8 +24,9 @@ class ErrorBoundary extends React.Component {
   render(){
     if(this.state.hasErrored){
         return (
-            <div >
-              <h1>hello</h1>
+            <div className="error" >
+              <h1 className="error__text">This page is ghost</h1>
+              <img src={GhostImg} alt="Error" className="error__image"/>
             </div>
         )
     }
