@@ -18,6 +18,7 @@ export function* fetchTeamsAsync() {
   try {
     const teamsRef = firestore.collection("teams");
     const snapshot = yield teamsRef.get();
+    console.log(snapshot)
     const teamsMap = yield call(convertTeamsSnapshotToMap, snapshot);
     yield put(fetchTeamsSuccess(teamsMap))
   } catch (err) {

@@ -25,7 +25,7 @@ const Header = ({ currentUser, signOutStart}) => {
       >
         CSGO RESOLUTIONS
       </a>
-      <Link className="header__text" to="/signin">
+      <Link className="header__text" to="/">
         FAQ
       </Link>
       {currentUser ? (
