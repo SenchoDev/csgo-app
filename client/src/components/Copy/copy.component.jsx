@@ -10,7 +10,7 @@ import ClipboardImg from "../../assets/copy.png";
 
 import "./copy.styles.scss";
 
-const Copy = ({ toggleCopiedButton, crosshair }) => (
+export const Copy = ({ toggleCopiedButton, crosshair }) => (
     <CopyToClipboard
       text={crosshair}
       onCopy={() =>

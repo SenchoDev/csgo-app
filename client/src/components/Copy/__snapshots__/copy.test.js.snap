@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Copy component should render CartIcon component 1`] = `ShallowWrapper {}`;
+
+exports[`Copy component should render Copy component 1`] = `ShallowWrapper {}`;
