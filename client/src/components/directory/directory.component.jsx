@@ -9,7 +9,7 @@ import TeamCard from "../teamcard/teamcard.component"
 
 import './directory.styles.scss';
 
-const Directory = ({ sections }) => {
+export const Directory = ({ sections }) => {
   return (
     <div className="directory-menu">
      {sections.map((section) => (

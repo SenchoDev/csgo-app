@@ -10,7 +10,7 @@ import { ReactComponent as ExitLogo } from "../../assets/logout.svg";
 
 import "./header.styles.scss";
 
-const Header = ({ currentUser, signOutStart}) => {
+export const Header = ({ currentUser, signOutStart}) => {
   return (
     <div className='header'>
       <div className="blur"></div>

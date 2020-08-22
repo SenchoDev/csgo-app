@@ -4,7 +4,7 @@ import { ReactComponent as GoogleLogo } from "../../assets/google.svg";
 
 import "./custom-button.styles.scss";
 
-const CustomButton = ({ children, isGoogleSignIn, ...otherProps }) => (
+export const CustomButton = ({ children, isGoogleSignIn, ...otherProps }) => (
   <button
     className={`${isGoogleSignIn ? "sign-in-with-google" : ""} button`}
     {...otherProps}

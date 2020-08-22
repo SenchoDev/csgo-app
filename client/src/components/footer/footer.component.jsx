@@ -2,11 +2,11 @@ import React from 'react';
 
 import Twitter from '../../assets/icons8-twitter-96 (1).png'
 import GitHub from '../../assets/icons8-github-60 (1).png'
-import { ReactComponent as Facebook } from "../../assets/icons8-facebook (1).svg";
+import { ReactComponent as Facebook } from "../../assets/icons8-facebook.svg";
 
 import './footer.styles.scss';
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <div className="footer">
       <h2 className="footer__text">© 2020 CSGOCrosshairs.herokuapp.com made with love</h2>
