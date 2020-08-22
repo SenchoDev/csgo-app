@@ -2,7 +2,7 @@ import React from "react";
 
 import "./info-button.styles.scss";
 
-const InfoButton = ({img , purple, text, fix}) => {
+export const InfoButton = ({img , purple, text, fix}) => {
   return (
     <div className={`${purple ? 'purple-btn' : ''} ${fix ? 'purble-btn__fix': ''} big-button`}>
       <img src={img} alt="copy" className="big-button__img" />

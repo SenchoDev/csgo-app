@@ -2,7 +2,7 @@ import React from "react";
 
 import "./heading.styles.scss";
 
-const Heading = () => {
+export const Heading = () => {
   return (
     <div className="heading">
       <h1 className="heading__primary">CSGO: Crosshairs</h1>

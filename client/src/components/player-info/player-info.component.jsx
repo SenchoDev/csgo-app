@@ -27,7 +27,7 @@ import PurpleHeart from "../../assets/purple.png";
 import Close from "../../assets/close.png";
 import WhiteClose from "../../assets/WhiteClose.png";
 
-const PlayerInfo = ({
+export const PlayerInfo = ({
   info: {
     name,
     img,

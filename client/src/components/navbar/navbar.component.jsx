@@ -8,7 +8,7 @@ import Logo2 from '../../assets/logo black.png'
 
 import "./navbar.styles.scss";
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
     <div className="navbar">
       <Link className="navbar__img-box" to="/">
