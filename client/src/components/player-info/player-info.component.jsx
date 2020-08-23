@@ -101,7 +101,6 @@ export const PlayerInfo = ({
                 className="info__crosshair-wrap"
                 onClick={() => setShownCrosshair(!shownCrosshair)}
               >
-                {" "}
                 <InfoButton img={Target} text={"Crosshair preview"} />
               </div>
               <div
