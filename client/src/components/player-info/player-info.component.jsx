@@ -27,6 +27,8 @@ import PurpleHeart from "../../assets/purple.png";
 import Close from "../../assets/close.png";
 import WhiteClose from "../../assets/WhiteClose.png";
 
+import  Img  from 'react-graceful-image'
+
 export const PlayerInfo = ({
   info: {
     name,
@@ -91,7 +93,7 @@ export const PlayerInfo = ({
       </div>
       <div className="info__grid">
         <div className="info__section">
-          <img src={img} alt="img" className="info__player" />
+          <Img src={img} alt="img" className="info__player" />
           <div className="info__overview">
             <span className="info__role">{role}</span>
             <div className="info__wrap">
