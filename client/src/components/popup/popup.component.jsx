@@ -10,7 +10,7 @@ import CloseButton from '../../assets/x-button.png'
 
 import './popup.styles.scss';
 
-const PopUp = ({ togglePopUp, error }) => {
+export const PopUp = ({ togglePopUp, error }) => {
   return (
    <div className="error">
      <div className="error__box-1">

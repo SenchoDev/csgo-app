@@ -9,7 +9,7 @@ import Keyboard from "../../assets/gaming.png";
 import MousePad from "../../assets/virtual-reality.png";
 import Monitor from "../../assets/television.png";
 
-const Settings = ({
+export const Settings = ({
   settings: { headset, keyboard, monitor, mouse, mousepad },
 }) => {
   return (

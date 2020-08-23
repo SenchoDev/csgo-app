@@ -9,7 +9,7 @@ import { selectTeamsForPreview } from "../../redux/teams/teams.selector";
 
 import "./teams-directory.styles.scss";
 
-const TeamsDirectory = ({ teams }) => {
+export const TeamsDirectory = ({ teams }) => {
   return (
     <div className="teams-menu">
       {teams.map((section) => (

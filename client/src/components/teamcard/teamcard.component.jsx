@@ -4,7 +4,7 @@ import { addPlayersInfo } from "../../redux/teams/teams.actions";
 
 import "./teamcard.styles.scss";
 
-const TeamCard = ({ section, addPlayersInfo }) => {
+export const TeamCard = ({ section, addPlayersInfo }) => {
   const { team, imageUrl, color, players, teamColor, teamsData } = section;
   return (
     <div className="directory-item">
@@ -14,13 +14,13 @@ const TeamCard = ({ section, addPlayersInfo }) => {
         </h3>
       </div>
       {players.map((item, i) => (
-        <div key={i} className={`${ i % 2 === 0 ? "directory-item__grey-box" : "directory-item__white-box" } `}
+        <div key={i} id='test-id' className={`${ i % 2 === 0 ? "directory-item__grey-box" : "directory-item__white-box" }`}
           onClick={() => addPlayersInfo({ ...teamsData[i], team, imageUrl })}
         >
           <p className="directory-item__player">{players[i]}</p>
         </div>
       ))}
-      <div className="directory-item__logo"style={{ backgroundImage: `url(${imageUrl})` }} />
+      <div className="directory-item__logo" style={{ backgroundImage: `url(${imageUrl})` }} />
     </div>
   );
 };
