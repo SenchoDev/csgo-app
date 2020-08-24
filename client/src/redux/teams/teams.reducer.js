@@ -1,8 +1,7 @@
 import TeamsActionTypes from "./teams.types";
 
-
 const INITIAL_STATE = {
-  teams: {},
+  teams: null,
   isFetching: false,
   errorMessage: undefined,
   playersInfo: false,
