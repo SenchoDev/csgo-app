@@ -11,7 +11,7 @@ import PinkHeart from "../../assets/pink.png";
 
 import "./playerscrosshairs.styles.scss";
 
-const PlayersCrosshairs = ({ savedCrosshairs, copied, removeCrosshair }) => {
+export const PlayersCrosshairs = ({ savedCrosshairs, copied, removeCrosshair }) => {
   return (
     <div className="crosshair">
     <div className={`${copied && 'info__copied-succes'} info__copied`}> <p className="info__copied-text">{copied && 'Copied to clipboard'}</p></div>

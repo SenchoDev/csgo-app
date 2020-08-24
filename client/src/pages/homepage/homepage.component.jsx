@@ -7,7 +7,7 @@ import Heading from "../../components/heading/heading.component";
 import Directory from "../../components/directory/directory.component";
 import Sign from '../../assets/right.png'
 
-const HomePage = () => {
+export const HomePage = () => {
   return (
     <div className="homepage-wrapper">
       <Heading />

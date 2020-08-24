@@ -10,7 +10,7 @@ import PopUp from "../../components/popup/popup.component";
 
 import { selectExistingError } from "../../redux/user/user.selectors";
 
-const SignInAndSignUpPage = ({ error }) => {
+export const SignInAndSignUpPage = ({ error }) => {
   return (
     <div>
       {error ? <PopUp /> : null}

@@ -7,8 +7,7 @@ import { fetchTeamsStart } from '../../redux/teams/teams.actions'
 
 import './teamslist.styles.scss'
 
-const TeamsList = ({ fetchTeamsStart }) => {
-
+export const TeamsList = ({ fetchTeamsStart }) => {
   useEffect(() => {
     fetchTeamsStart();
   }, [fetchTeamsStart]);

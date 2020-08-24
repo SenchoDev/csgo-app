@@ -10,7 +10,7 @@ import PurpleHeart from "../../assets/purple.png";
 
 import "./playerssettings.styles.scss";
 
-const PlayersSettings = ({ savedSettings, removeSettings }) => {
+export const PlayersSettings = ({ savedSettings, removeSettings }) => {
   return (
     <div className="settings">
       {savedSettings.map(({ team, name, id, settings }) => (
